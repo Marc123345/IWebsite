@@ -1,0 +1,35 @@
+For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+
+By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+
+Use icons from lucide-react for logos.
+
+Use stock photos from unsplash where appropriate, only valid URLs you know exist. Do not download the images, only link to them in image tags.
+
+
+"In my Bolt.new application, I aim to implement secure and efficient token storage. Please assist me in:
+
+Selecting an Appropriate Storage Mechanism: Evaluate the pros and cons of storing tokens in memory, sessionStorage, localStorage, or cookies, considering factors like security, persistence, and accessibility.
+
+Implementing Token Storage: Provide code examples for securely storing access and refresh tokens using the chosen mechanism.
+github.com
++1
+reddit.com
++1
+
+Managing Token Lifecycle: Advise on best practices for token expiration, renewal, and revocation to maintain security and reduce unnecessary token usage.
+
+Enhancing Security Measures: Suggest additional security measures, such as setting appropriate HTTP headers, using secure flags, and protecting against common vulnerabilities like XSS and CSRF.
+
+Ensure that the solutions provided align with industry best practices and are optimized for performance and security."
+
+This prompt guides the AI to offer comprehensive assistance in implementing secure token storage within your Bolt.new application, focusing on minimizing token usage and adhering to best practices.
+
+
+
+
+
+
+
+
+Sources

@@ -1,0 +1,61 @@
+{
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "joinNow": "Join Now",
+    "contactUs": "Get Therapy Solutions",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "services": "Services",
+    "community": "Community",
+    "partners": "Partners",
+    "contact": "Contact",
+    "login": "Log In",
+    "signup": "Sign Up"
+  },
+  "home": {
+    "hero": {
+      "title": "The Right Care at the Right Time to the Right Person",
+      "subtitle": "Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "iLIGHT is a mission-driven organization dedicated to \"Lighting up the Lives\" of people impacted by personal challenges.",
+      "tagline": "HOW MANY LIVES DID YOU LIGHT UP TODAY?"
+    }
+  },
+  "community": {
+    "hero": {
+      "title": "A Community That Understands",
+      "description": "Mission to connect locally and globally on a known or anonymized basis to share the power of like-minded communal healing and resilience.",
+      "features": {
+        "supportiveEnvironment": "Supportive Environment",
+        "expertLedEvents": "Expert-Led Events",
+        "safeSpace": "Safe Space"
+      },
+      "cta": "Join Our Community"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} iLight X Corporation. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    }
+  }
+}

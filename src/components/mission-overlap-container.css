@@ -1,0 +1,62 @@
+/* Mission Overlap Container Styles */
+.mission-overlap-container {
+  @apply bg-ilight-600 rounded-xl shadow-xl relative overflow-hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive padding for mission container */
+.mission-overlap-container {
+  @apply p-6 sm:p-8 md:p-12;
+}
+
+/* Responsive layout for mission container */
+@media (max-width: 767px) {
+  .mission-overlap-container {
+    @apply flex flex-col gap-6;
+  }
+  
+  .mission-overlap-container > div:first-child {
+    @apply w-full mb-4;
+  }
+  
+  .mission-overlap-container > div:last-child {
+    @apply w-full;
+  }
+}
+
+@media (min-width: 768px) {
+  .mission-overlap-container {
+    @apply flex flex-row items-center;
+  }
+  
+  .mission-overlap-container > div:first-child {
+    @apply w-1/3 mb-0;
+  }
+  
+  .mission-overlap-container > div:last-child {
+    @apply w-2/3;
+  }
+}
+
+/* Typography for mission container */
+.mission-overlap-container h2 {
+  @apply text-white text-xl sm:text-2xl md:text-3xl font-serif font-semibold leading-tight mb-4;
+}
+
+.mission-overlap-container .text-white {
+  @apply text-2xl sm:text-3xl md:text-4xl font-bold text-center;
+}
+
+.mission-overlap-container .text-white/90 {
+  @apply text-base sm:text-lg md:text-xl font-light leading-relaxed;
+}
+
+/* Animation for mission container */
+@keyframes gentle-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); }
+}
+
+.mission-overlap-container {
+  animation: gentle-glow 4s ease-in-out infinite;
+}

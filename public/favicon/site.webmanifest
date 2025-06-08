@@ -1,0 +1,19 @@
+{
+  "name": "iLight - Personal Wellness Support",
+  "short_name": "iLight",
+  "icons": [
+    {
+      "src": "/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#3B5F8A",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

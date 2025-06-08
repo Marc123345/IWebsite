@@ -1,0 +1,1347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.875rem;  /* 30px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+    --font-size-5xl: 3rem;      /* 48px */
+
+    /* Line Heights */
+    --line-height-none: 1;
+    --line-height-tight: 1.25;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 1.8;
+
+    /* Letter Spacing */
+    --letter-spacing-tighter: -0.05em;
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0em;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
+    --letter-spacing-widest: 0.1em;
+
+    /* Mobile Defaults */
+    --font-h1: 36px;
+    --font-h2: 28px;
+    --font-h3: 20px;
+    --font-body-l: 18px;
+    --font-body-m: 16px;
+    --font-caption: 14px;
+    --font-quote: 20px;
+  }
+
+  @media (min-width: 641px) {
+    :root {
+      --font-h1: 48px;
+      --font-h2: 36px;
+      --font-h3: 24px;
+      --font-body-l: 20px;
+      --font-quote: 24px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    :root {
+      --font-h1: 64px;
+      --font-h2: 40px;
+      --font-h3: 28px;
+      --font-quote: 28px;
+    }
+  }
+
+  /* Base Typography */
+  html {
+    @apply antialiased scroll-smooth;
+    font-family: var(--font-family);
+  }
+
+  body {
+    @apply font-sans text-ilight-700 bg-ilight-50;
+    font-size: var(--font-body-m);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Improved Focus Styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ilight-500 ring-offset-2;
+  }
+
+  /* Typography Scale - SIMPLIFIED */
+  h1, .h1 {
+    font-size: var(--font-h1);
+    @apply font-serif font-bold tracking-tight leading-[1.2] mb-8 text-ilight-800;
+  }
+
+  h2, .h2 {
+    font-size: var(--font-h2);
+    @apply font-serif font-bold tracking-tight leading-[1.3] mb-6 text-ilight-800;
+  }
+
+  h3, .h3 {
+    font-size: var(--font-h3);
+    @apply font-serif font-bold tracking-tight leading-[1.4] mb-4 text-ilight-800;
+  }
+
+  h4, .h4 {
+    @apply text-xl font-bold mb-3 text-ilight-800;
+  }
+
+  h5, .h5 {
+    @apply text-lg font-semibold mb-2 text-ilight-800;
+  }
+
+  h6, .h6 {
+    @apply text-base font-semibold mb-2 text-ilight-800;
+  }
+
+  p, .body {
+    font-size: var(--font-body-m);
+    @apply leading-relaxed text-ilight-700 mb-6;
+  }
+
+  .body-sm {
+    @apply text-base leading-relaxed text-ilight-700 mb-4;
+  }
+
+  .caption {
+    font-size: var(--font-caption);
+    @apply text-ilight-600 leading-normal;
+  }
+
+  .quote {
+    font-size: var(--font-quote);
+    @apply font-serif italic text-ilight-700 leading-relaxed;
+  }
+
+  .overline {
+    @apply text-xs uppercase tracking-wider font-medium text-ilight-600 mb-2;
+  }
+
+  .display {
+    @apply font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-ilight-800;
+  }
+
+  /* Form Elements */
+  input, select, textarea {
+    @apply w-full px-4 py-3 text-base border border-ilight-200 rounded-lg
+      bg-white text-ilight-700 placeholder-ilight-400
+      hover:border-ilight-300 focus:border-ilight-500 focus:ring-2
+      focus:ring-ilight-500/20 focus:outline-none
+      disabled:opacity-50 disabled:cursor-not-allowed
+      transition-all duration-200;
+  }
+
+  /* Improved Checkbox/Radio Styles */
+  input[type="checkbox"], input[type="radio"] {
+    @apply w-5 h-5 border-2 border-ilight-200 rounded
+      text-ilight-500 focus:ring-2 focus:ring-ilight-500/20
+      focus:ring-offset-2 focus:outline-none cursor-pointer
+      transition-all duration-200
+      hover:border-ilight-300;
+  }
+
+  /* Enhanced Select Styles */
+  select {
+    @apply appearance-none bg-no-repeat bg-right pr-10
+      cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-size: 1.5em 1.5em;
+  }
+
+  /* Labels */
+  label {
+    @apply block text-sm font-medium text-ilight-700 mb-1.5;
+  }
+}
+
+@layer components {
+  /* Container Padding */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Form Components */
+  .form-group {
+    @apply mb-6;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-ilight-700 mb-1.5;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 text-base border border-ilight-200 rounded-lg
+      bg-white text-ilight-700 placeholder-ilight-400
+      hover:border-ilight-300 focus:border-ilight-500 focus:ring-2
+      focus:ring-ilight-500/20 focus:outline-none
+      disabled:opacity-50 disabled:cursor-not-allowed
+      transition-all duration-200;
+  }
+
+  .form-select {
+    @apply form-input appearance-none bg-no-repeat bg-right pr-10
+      cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-size: 1.5em 1.5em;
+  }
+
+  .form-checkbox {
+    @apply w-5 h-5 border-2 border-ilight-200 rounded
+      text-ilight-500 focus:ring-2 focus:ring-ilight-500/20
+      focus:ring-offset-2 focus:outline-none cursor-pointer
+      transition-all duration-200;
+  }
+
+  .form-textarea {
+    @apply form-input min-h-[100px] resize-y;
+  }
+
+  .form-error {
+    @apply text-sm text-error mt-1 flex items-center gap-1;
+  }
+
+  .form-helper {
+    @apply text-sm text-ilight-500 mt-1;
+  }
+
+  /* Text shadow for better contrast */
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  /* High contrast text */
+  .text-high-contrast {
+    @apply font-medium text-shadow;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-ilight-600 text-white rounded-lg
+      hover:bg-ilight-700 focus:ring-2 focus:ring-ilight-600/20
+      transition-all duration-300 font-medium
+      disabled:opacity-50 disabled:cursor-not-allowed
+      active:scale-95 text-sm sm:text-base shadow-calm hover:shadow-calm-lg;
+  }
+
+  .btn-secondary {
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-ilight-100 text-ilight-700 rounded-lg
+      hover:bg-ilight-200 focus:ring-2 focus:ring-ilight-500/20
+      transition-all duration-300 font-medium
+      disabled:opacity-50 disabled:cursor-not-allowed
+      active:scale-95 text-sm sm:text-base shadow-calm hover:shadow-calm-lg;
+  }
+
+  .btn-outline {
+    @apply px-4 sm:px-6 py-2 sm:py-3 border-2 border-ilight-600 text-ilight-700 rounded-lg
+      hover:bg-ilight-50 hover:text-ilight-700 focus:ring-2 focus:ring-ilight-500/20
+      transition-all duration-300 font-medium
+      disabled:opacity-50 disabled:cursor-not-allowed
+      active:scale-95 text-sm sm:text-base shadow-calm hover:shadow-calm-lg;
+  }
+
+  .btn-calm {
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-ilight-700 rounded-lg
+      hover:bg-white shadow-calm hover:shadow-calm-lg focus:ring-2 focus:ring-ilight-500/20
+      transition-all duration-300 font-medium
+      disabled:opacity-50 disabled:cursor-not-allowed
+      active:scale-95 text-sm sm:text-base;
+  }
+
+  .btn-light {
+    @apply px-4 sm:px-6 py-2 sm:py-3 bg-white text-ilight-700 rounded-full
+      hover:bg-ilight-50 focus:ring-2 focus:ring-ilight-500/20
+      transition-all duration-300 font-medium
+      disabled:opacity-50 disabled:cursor-not-allowed
+      active:scale-95 text-sm sm:text-base;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-calm border border-ilight-100
+      hover:shadow-calm-lg transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:scale-[1.02] hover:shadow-calm-lg transition-all duration-300;
+  }
+
+  /* Grid Layouts */
+  .grid-auto-fit {
+    @apply grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .grid-auto-fill {
+    @apply grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Flex Layouts */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-start {
+    @apply flex items-start justify-start;
+  }
+
+  .flex-end {
+    @apply flex items-end justify-end;
+  }
+
+  /* Typography Utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-ilight-800 to-ilight-700;
+  }
+
+  .text-gradient-light {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-ilight-100;
+  }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    @apply opacity-0 animate-[fadeIn_0.3s_ease-in-out_forwards];
+  }
+
+  .animate-slide-up {
+    @apply opacity-0 translate-y-4 animate-[slideUp_0.3s_ease-in-out_forwards];
+  }
+
+  /* Accessibility Utilities */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ilight-500/20 focus:ring-offset-2;
+  }
+
+  /* Input with icon */
+  .input-with-icon {
+    @apply relative;
+  }
+
+  .input-with-icon input,
+  .input-with-icon select,
+  .input-with-icon textarea {
+    @apply pl-10;
+  }
+
+  .input-with-icon .icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ilight-400;
+  }
+
+  /* Toast Customization */
+  :root {
+    --toast-bg: theme('colors.white');
+    --toast-color: theme('colors.ilight.700');
+    --toast-border: theme('colors.ilight.200');
+  }
+
+  /* High Contrast Mode */
+  .high-contrast {
+    --contrast-bg: #ffffff;
+    --contrast-text: #000000;
+    --contrast-link: #0000EE;
+    --contrast-border: #000000;
+
+    background-color: var(--contrast-bg) !important;
+    color: var(--contrast-text) !important;
+  }
+
+  .high-contrast h1,
+  .high-contrast h2,
+  .high-contrast h3,
+  .high-contrast h4,
+  .high-contrast h5,
+  .high-contrast h6 {
+    color: var(--contrast-text) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--contrast-text) !important; /* For gradient override */
+    text-shadow: none !important; /* Remove text shadow for contrast */
+  }
+
+  .high-contrast a {
+    color: var(--contrast-link) !important;
+    text-decoration: underline !important;
+  }
+
+  .high-contrast button,
+  .high-contrast .btn-primary, /* Assuming btn-primary is a class for primary buttons */
+  .high-contrast .btn-secondary { /* Assuming btn-secondary for secondary */
+    background-color: var(--contrast-bg) !important; /* White background for buttons */
+    color: var(--contrast-text) !important;      /* Black text */
+    border: 2px solid var(--contrast-border) !important; /* Black border */
+    text-shadow: none !important;
+  }
+
+  /* Dark Theme */
+  .dark-theme {
+    --dark-bg: #121212; /* Very dark grey, near black */
+    --dark-card: #1e1e1e; /* Slightly lighter grey for cards */
+    --dark-text: #e0e0e0; /* Light grey for text */
+    --dark-text-secondary: #a0a0a0; /* Dimmer grey for secondary text */
+    --dark-border: #333333; /* Dark grey for borders */
+    --dark-primary-accent: #5B86E5; /* A sample accent color for dark theme */
+
+    background-color: var(--dark-bg) !important;
+    color: var(--dark-text) !important;
+  }
+
+  .dark-theme body { /* Ensure body also gets dark theme colors */
+      background-color: var(--dark-bg) !important;
+      color: var(--dark-text) !important;
+  }
+
+
+  .dark-theme h1,
+  .dark-theme h2,
+  .dark-theme h3,
+  .dark-theme h4,
+  .dark-theme h5,
+  .dark-theme h6 {
+    color: var(--dark-text) !important;
+    background: none !important; /* Override gradients */
+    -webkit-text-fill-color: var(--dark-text) !important; /* For gradient override */
+    text-shadow: none !important; /* Remove text shadow that might clash */
+  }
+
+  .dark-theme p,
+  .dark-theme .body,
+  .dark-theme .body-sm,
+  .dark-theme .caption,
+  .dark-theme .quote,
+  .dark-theme .overline {
+    color: var(--dark-text-secondary) !important;
+  }
+
+  .dark-theme .card, /* General card style */
+  .dark-theme .bg-white, /* Elements explicitly using bg-white */
+  .dark-theme .bg-ilight-50, /* Light backgrounds that need to be dark */
+  .dark-theme .bg-gray-50,
+  .dark-theme .bg-amber-50 {
+    background-color: var(--dark-card) !important;
+    border-color: var(--dark-border) !important;
+    color: var(--dark-text) !important; /* Ensure text within cards is also light */
+  }
+
+  .dark-theme .card p,
+  .dark-theme .bg-white p,
+  .dark-theme .bg-ilight-50 p {
+     color: var(--dark-text-secondary) !important;
+  }
+  .dark-theme .card h3, /* Headings within cards */
+  .dark-theme .bg-white h3,
+  .dark-theme .bg-ilight-50 h3 {
+     color: var(--dark-text) !important;
+  }
+
+
+  .dark-theme .text-ilight-700,
+  .dark-theme .text-ilight-800,
+  .dark-theme .text-black,
+  .dark-theme .text-gray-800,
+  .dark-theme .text-gray-700,
+  .dark-theme .text-gray-600 {
+    color: var(--dark-text) !important;
+  }
+  .dark-theme .text-ilight-600,
+  .dark-theme .text-ilight-500,
+  .dark-theme .text-ilight-400,
+  .dark-theme .text-gray-500 {
+    color: var(--dark-text-secondary) !important;
+  }
+
+
+  .dark-theme .border-ilight-100,
+  .dark-theme .border-ilight-200,
+  .dark-theme .border-gray-100,
+  .dark-theme .border-gray-200 {
+    border-color: var(--dark-border) !important;
+  }
+
+  .dark-theme .btn-primary {
+    background-color: var(--dark-primary-accent) !important;
+    color: var(--dark-bg) !important; /* Dark text on light accent */
+    border-color: var(--dark-primary-accent) !important;
+  }
+  .dark-theme .btn-primary:hover {
+    filter: brightness(110%);
+  }
+
+  .dark-theme .btn-calm,
+  .dark-theme .btn-light {
+    background-color: var(--dark-card) !important;
+    color: var(--dark-text) !important;
+    border: 1px solid var(--dark-border) !important;
+  }
+  .dark-theme .btn-calm:hover,
+  .dark-theme .btn-light:hover {
+    background-color: #2a2a2a !important; /* Slightly lighter card color for hover */
+  }
+
+
+  .dark-theme .enhanced-hero-overlay {
+     background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%) !important;
+  }
+
+  .dark-theme .mission-overlap-container {
+    background-color: #22272d !important; /* A dark blue-grey for mission block */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
+  }
+  .dark-theme .mission-overlap-container h2,
+  .dark-theme .mission-overlap-container p,
+  .dark-theme .mission-overlap-container div { /* For the animated text span */
+    color: var(--dark-text) !important;
+    text-shadow: none !important;
+  }
+
+
+  .dark-theme .bg-gradient-to-br.from-ilight-500.to-ilight-600, /* Specific gradient CTA on PartnersPage and ServicesPage */
+  .dark-theme Section[gradientFrom="from-ilight-500"][gradientTo="to-ilight-600"] > div /* For gradient sections */
+   {
+    background-image: linear-gradient(to bottom right, #2c3e50, #1a252f) !important; /* Dark blue gradient */
+  }
+
+  .dark-theme .text-ilight-500 { /* Often used for icons or secondary text */
+    color: #88a2c3 !important; /* Lighter blue for icons in dark mode */
+  }
+  .dark-theme .text-green-500, .dark-theme .text-green-600 { color: #38a169 !important; } /* Keep green for success-like icons */
+  .dark-theme .text-red-500, .dark-theme .text-red-600 { color: #e53e3e !important; } /* Keep red for error-like icons */
+  .dark-theme .text-blue-500, .dark-theme .text-blue-600 { color: #4299e1 !important; }
+  .dark-theme .text-purple-500, .dark-theme .text-purple-600 { color: #9f7aea !important; }
+  .dark-theme .text-amber-500, .dark-theme .text-amber-600 { color: #dd6b20 !important; }
+
+  .dark-theme .bg-ilight-50 { background-color: var(--dark-card) !important; }
+  .dark-theme .bg-green-100 { background-color: rgba(72, 187, 120, 0.1) !important; }
+  .dark-theme .bg-blue-100 { background-color: rgba(66, 153, 225, 0.1) !important; }
+  .dark-theme .bg-purple-100 { background-color: rgba(159, 122, 234, 0.1) !important; }
+  .dark-theme .bg-amber-100 { background-color: rgba(237, 137, 54, 0.1) !important; }
+  .dark-theme .bg-red-100 { background-color: rgba(229, 62, 62, 0.1) !important;}
+
+
+  /* Reading Guide */
+  .reading-guide {
+    cursor: none;
+  }
+
+  .reading-guide::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 0, 0.1); /* Semi-transparent yellow */
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 9999; /* Ensures it's on top */
+    transform: translateY(-50%); /* Centers it on the mouse pointer */
+    border-top: 1px solid rgba(255, 255, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 0, 0.3);
+    mix-blend-mode: multiply; /* Or other blend modes for better effect */
+  }
+  .dark-theme .reading-guide::after {
+    background-color: rgba(75, 85, 99, 0.2); /* Darker, less intrusive for dark mode */
+    border-top: 1px solid rgba(75, 85, 99, 0.4);
+    border-bottom: 1px solid rgba(75, 85, 99, 0.4);
+    mix-blend-mode: screen; /* Screen or lighten might work better on dark backgrounds */
+  }
+  
+  /* Consistent spacing classes */
+  .section-spacing {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .section-spacing-lg {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+  
+  .section-spacing-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  
+  .content-spacing {
+    @apply space-y-8 md:space-y-12 lg:space-y-16;
+  }
+  
+  .card-spacing {
+    @apply p-6 md:p-8 lg:p-10;
+  }
+  
+  /* Mobile-optimized spacing */
+  .mobile-container {
+    @apply px-4 sm:px-6 md:px-8;
+  }
+  
+  .mobile-section {
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
+  }
+  
+  .mobile-card {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  .mobile-gap {
+    @apply gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  /* Content density helpers */
+  .content-readable {
+    @apply max-w-3xl mx-auto;
+  }
+  
+  .content-breathable {
+    @apply space-y-8 leading-relaxed;
+  }
+  
+  .content-digestible {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+  
+  /* Enhanced typography classes for better readability */
+  .text-readable {
+    @apply text-base leading-relaxed;
+    max-width: 70ch; /* Optimal reading width */
+  }
+  
+  .text-contrast-high {
+    @apply text-black font-medium;
+  }
+  
+  .text-contrast-medium {
+    @apply text-gray-800;
+  }
+  
+  /* Glass card text enhancement */
+  .glass-card-text {
+    @apply text-white text-shadow-lg;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Improved heading hierarchy */
+  .heading-xl {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight;
+  }
+  
+  .heading-sm {
+    @apply text-xl sm:text-2xl md:text-3xl font-bold tracking-tight leading-tight;
+  }
+  
+  /* Standardized line heights */
+  .leading-title {
+    line-height: 1.2;
+  }
+  
+  .leading-subtitle {
+    line-height: 1.3;
+  }
+  
+  .leading-body {
+    line-height: 1.6;
+  }
+  
+  .leading-caption {
+    line-height: 1.4;
+  }
+  
+  /* Interactive elements - standardized styles */
+  .interactive-element {
+    @apply transition-all duration-300 transform-gpu;
+  }
+  
+  .interactive-element:hover {
+    @apply scale-[1.02];
+  }
+  
+  .interactive-element:active {
+    @apply scale-[0.98];
+  }
+  
+  .interactive-element:focus-visible {
+    @apply ring-2 ring-ilight-500 ring-offset-2 outline-none;
+  }
+  
+  /* Button standardization */
+  .btn-standard {
+    @apply inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 
+      focus:outline-none focus:ring-2 focus:ring-offset-2 transform-gpu;
+  }
+  
+  /* Button sizes */
+  .btn-xs {
+    @apply px-2.5 py-1.5 text-xs rounded;
+  }
+  
+  .btn-sm {
+    @apply px-3.5 py-2 text-sm rounded-md;
+  }
+  
+  .btn-md {
+    @apply px-5 py-2.5 text-base rounded-lg;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-lg rounded-lg;
+  }
+  
+  .btn-xl {
+    @apply px-8 py-4 text-xl rounded-xl;
+  }
+  
+  /* Button loading state */
+  .btn-loading {
+    @apply relative;
+  }
+  
+  .btn-loading .btn-content {
+    @apply invisible;
+  }
+  
+  .btn-loading .btn-spinner {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+  
+  /* Form validation styles */
+  .input-error {
+    @apply border-red-300 focus:ring-red-500 focus:border-red-500;
+  }
+  
+  .input-success {
+    @apply border-green-300 focus:ring-green-500 focus:border-green-500;
+  }
+  
+  .input-loading {
+    @apply bg-ilight-50;
+  }
+  
+  /* Form feedback messages */
+  .feedback-error {
+    @apply text-sm text-red-600 mt-1 flex items-center gap-1;
+  }
+  
+  .feedback-success {
+    @apply text-sm text-green-600 mt-1 flex items-center gap-1;
+  }
+  
+  .feedback-info {
+    @apply text-sm text-blue-600 mt-1 flex items-center gap-1;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .container-padding {
+    @apply px-4;
+  }
+
+  .card { /* Already defined in @layer components, this could be redundant or for overrides */
+    @apply p-4;
+  }
+
+  .btn-primary, .btn-secondary, .btn-outline, .btn-calm, .btn-light {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  /* Improved mobile spacing */
+  h1, .h1 {
+    @apply text-3xl mb-4;
+  }
+  
+  h2, .h2 {
+    @apply text-2xl mb-3;
+  }
+  
+  h3, .h3 {
+    @apply text-xl mb-2;
+  }
+  
+  p, .body {
+    @apply mb-4;
+  }
+  
+  .section-spacing {
+    @apply py-12;
+  }
+  
+  .section-spacing-lg {
+    @apply py-16;
+  }
+  
+  .section-spacing-sm {
+    @apply py-8;
+  }
+  
+  /* Reduce content density on mobile */
+  .mission-overlap-container {
+    @apply p-4;
+  }
+  
+  .mission-overlap-container h2 {
+    @apply text-xl mb-2;
+  }
+  
+  .mission-overlap-container p {
+    @apply text-sm;
+  }
+  
+  /* Improved mobile typography */
+  .text-readable {
+    @apply text-sm leading-relaxed;
+  }
+  
+  .heading-xl {
+    @apply text-3xl leading-tight;
+  }
+  
+  .heading-lg {
+    @apply text-2xl leading-tight;
+  }
+  
+  .heading-md {
+    @apply text-xl leading-tight;
+  }
+  
+  .heading-sm {
+    @apply text-lg leading-tight;
+  }
+  
+  /* Mobile button adjustments */
+  .btn-standard {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .btn-lg, .btn-xl {
+    @apply px-5 py-2.5 text-base;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hero section with proper navbar spacing */
+.hero-section { /* Generic hero section class */
+  @apply min-h-screen relative overflow-hidden flex items-center;
+  padding-top: 5rem; /* Adjust this value based on your actual navbar height */
+}
+
+.hero-section-image {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.hero-section-overlay { /* A generic overlay if not using enhanced-hero-overlay */
+  @apply absolute inset-0 bg-gradient-to-br from-black/60 to-black/40;
+}
+
+.hero-section-content {
+  @apply container-padding relative z-10 py-24 w-full text-center; /* Ensure text-center if most hero content is centered */
+}
+
+
+/* Image loading optimizations */
+img.lazy-load { /* For use with Intersection Observer or similar lazy loading JS */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img.lazy-loaded {
+  opacity: 1;
+}
+
+
+/* Content visibility optimizations for long pages */
+.content-visibility-auto { /* Apply to long scrolling sections */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px; /* Estimate height; adjust '500px' based on typical section height */
+}
+
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important; /* Ensure readable font size for print */
+  }
+
+  h1,h2,h3,h4,h5,h6,p,a,li,span,div {
+    color: black !important;
+    background: none !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: black !important;
+  }
+  a {
+    text-decoration: underline !important;
+    color: #0000EE !important; /* Standard blue for links in print */
+  }
+  a[href^="/"]:after {
+    content: " (" attr(href) ")"; /* Show internal links */
+  }
+  a[href^="http"]:after, a[href^="https"]:after {
+    content: " (" attr(href) ")"; /* Show external links */
+  }
+
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  .card, .section { /* Ensure cards and sections don't break awkwardly */
+    break-inside: avoid-page;
+  }
+}
+
+/* Prevent animation flashing before JS loads */
+.animation-paused-until-load {
+  animation-play-state: paused !important;
+}
+
+html.js-loaded .animation-paused-until-load {
+  animation-play-state: running !important;
+}
+
+/* Reduce animations for performance */
+.reduce-animations * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  animation-delay: 0ms !important;
+}
+
+/* Hardware acceleration classes */
+.hardware-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Animation performance classes */
+.animation-low {
+  --animation-scale: 0.5;
+  --animation-duration-multiplier: 1.5;
+}
+
+.animation-medium {
+  --animation-scale: 0.8;
+  --animation-duration-multiplier: 1.2;
+}
+
+.animation-high {
+  --animation-scale: 1;
+  --animation-duration-multiplier: 1;
+}
+
+/* Enhanced UI Components */
+.enhanced-text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-ilight-600 to-ilight-700;
+}
+
+.enhanced-card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.enhanced-card-shadow:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+}
+
+.enhanced-glass-effect {
+  /* Ensure this provides enough contrast for text on top */
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.enhanced-text-shadow { /* Re-defined, matches .text-shadow-lg more or less */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.enhanced-gradient-overlay { /* Example for an image overlay */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.enhanced-button-hover { /* General hover effect for buttons */
+  @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95;
+}
+
+.enhanced-section-spacing { /* Consistent vertical spacing for sections */
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.enhanced-container { /* Consistent container for content centering */
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.enhanced-divider { /* A styled divider */
+  @apply w-24 h-1 bg-gradient-to-r from-ilight-500 to-ilight-600 rounded-full mx-auto my-8;
+}
+
+.enhanced-card-grid { /* A common grid setup for cards */
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+}
+
+.enhanced-feature-icon { /* For styling icons in feature lists */
+  @apply w-12 h-12 rounded-xl bg-ilight-50 text-ilight-500 flex items-center justify-center mb-4 shadow-md;
+}
+
+.enhanced-testimonial { /* Styling for testimonial blocks */
+  @apply bg-white rounded-xl p-6 shadow-lg border border-ilight-100 relative;
+}
+
+.enhanced-testimonial::before { /* Quotation mark for testimonials */
+  content: '"';
+  @apply absolute text-6xl text-ilight-100 font-serif -top-4 -left-2 opacity-50;
+}
+
+.enhanced-stat-card { /* For displaying stats */
+  @apply bg-white rounded-xl p-6 shadow-lg border border-ilight-100 text-center;
+}
+
+.enhanced-stat-value {
+  @apply text-3xl font-bold text-ilight-700 mb-1;
+}
+
+.enhanced-stat-label {
+  @apply text-ilight-500;
+}
+
+.enhanced-cta-section { /* Styling for Call to Action sections */
+  @apply bg-gradient-to-br from-ilight-600 to-ilight-700 text-white py-16 rounded-3xl shadow-xl;
+}
+
+.enhanced-cta-button { /* Styling for buttons within CTAs */
+  @apply bg-white text-ilight-600 px-8 py-4 rounded-full font-semibold shadow-lg
+    hover:bg-ilight-50 transition-all duration-300 transform hover:scale-105;
+}
+
+/* Enhanced Hero Section */
+.enhanced-hero {
+  @apply min-h-screen relative overflow-hidden flex items-center justify-center;
+  padding-top: 5rem; /* Default padding, might be overridden by inline styles or specific page hero styles */
+}
+
+.enhanced-hero-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 z-10;
+}
+
+.enhanced-hero-content {
+  @apply relative z-20 container mx-auto px-4 py-24 text-center; /* Ensure 'container' is defined or use Tailwind's 'container' */
+}
+
+/* Enhanced Button Styles */
+.enhanced-btn-primary {
+  @apply px-6 py-3 bg-ilight-600 text-white rounded-lg font-medium
+    hover:bg-ilight-700 transition-all duration-300 shadow-lg hover:shadow-xl
+    transform hover:translate-y-[-2px] active:translate-y-[1px];
+}
+
+.enhanced-btn-secondary {
+  @apply px-6 py-3 bg-white text-ilight-600 rounded-lg font-medium
+    hover:bg-ilight-50 transition-all duration-300 shadow-lg hover:shadow-xl
+    transform hover:translate-y-[-2px] active:translate-y-[1px];
+}
+
+/* Enhanced Card */
+.enhanced-card {
+  @apply bg-white rounded-xl p-6 shadow-lg border border-ilight-100
+    hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02];
+}
+
+/* 3D Card Styles */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Mission Overlap Section */
+.mission-overlap-container {
+  @apply relative overflow-hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Mobile-optimized mission container */
+@media (max-width: 640px) {
+  .mission-overlap-container {
+    @apply p-4 rounded-lg;
+  }
+  
+  .mission-overlap-container h2 {
+    @apply text-xl mb-2;
+  }
+  
+  .mission-overlap-container p {
+    @apply text-sm leading-relaxed;
+  }
+}
+
+/* Glass card text enhancement */
+.glass-card-enhanced-text {
+  @apply text-white font-medium;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.01em;
+}
+
+/* Improved contrast for glass cards */
+.glass-card-high-contrast {
+  @apply bg-black/40 backdrop-blur-md;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card-high-contrast * {
+  @apply text-white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Standardized font sizes */
+.text-xs-standard {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.5;
+}
+
+.text-sm-standard {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+}
+
+.text-base-standard {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+}
+
+.text-lg-standard {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.6;
+}
+
+.text-xl-standard {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.5;
+}
+
+.text-2xl-standard {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.4;
+}
+
+.text-3xl-standard {
+  font-size: 1.875rem; /* 30px */
+  line-height: 1.3;
+}
+
+.text-4xl-standard {
+  font-size: 2.25rem; /* 36px */
+  line-height: 1.2;
+}
+
+/* Improved text contrast helpers */
+.text-contrast-enhanced {
+  @apply text-black font-medium;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.text-contrast-enhanced-light {
+  @apply text-white font-medium;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Button loading state animations */
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-loading-spinner {
+  animation: button-loading-spinner 1s linear infinite;
+}
+
+/* Button hover and focus states */
+.button-hover-effect {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.button-hover-effect:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+.button-hover-effect:active {
+  @apply transform translate-y-0 shadow-md;
+}
+
+.button-hover-effect:focus-visible {
+  @apply ring-2 ring-offset-2 ring-ilight-500 outline-none;
+}
+
+/* Form validation visual feedback */
+.form-field-valid {
+  @apply border-green-300;
+}
+
+.form-field-valid:focus {
+  @apply ring-green-500/20 border-green-500;
+}
+
+.form-field-invalid {
+  @apply border-red-300;
+}
+
+.form-field-invalid:focus {
+  @apply ring-red-500/20 border-red-500;
+}
+
+/* Form field transitions */
+.form-field-transition {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Form field focus state */
+.form-field-focus {
+  @apply ring-2 ring-ilight-500/20 border-ilight-500;
+}
+
+/* Form field disabled state */
+.form-field-disabled {
+  @apply opacity-50 cursor-not-allowed bg-gray-100;
+}
+
+/* Form field with icon */
+.form-field-with-icon {
+  @apply pl-10;
+}
+
+/* Form field icon */
+.form-field-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-ilight-400;
+}
+
+/* Form field loading state */
+.form-field-loading {
+  @apply opacity-70 pointer-events-none;
+}
+
+/* Form field success state */
+.form-field-success {
+  @apply border-green-300;
+}
+
+.form-field-success-icon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-green-500;
+}
+
+/* Form field error state */
+.form-field-error {
+  @apply border-red-300;
+}
+
+.form-field-error-icon {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-red-500;
+}
+
+/* Form field error message */
+.form-field-error-message {
+  @apply text-sm text-red-600 mt-1 flex items-center gap-1;
+}
+
+/* Form field helper text */
+.form-field-helper {
+  @apply text-sm text-ilight-500 mt-1;
+}
+
+/* Interactive element states */
+.interactive-hover {
+  @apply hover:bg-ilight-50 hover:border-ilight-300;
+}
+
+.interactive-active {
+  @apply active:bg-ilight-100 active:border-ilight-400;
+}
+
+.interactive-focus {
+  @apply focus:outline-none focus:ring-2 focus:ring-ilight-500/20 focus:border-ilight-500;
+}
+
+.interactive-disabled {
+  @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100;
+}
+
+/* Fix for scrollbar-hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
