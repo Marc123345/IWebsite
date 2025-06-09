@@ -29,8 +29,6 @@ import {
   GentleWave
 } from '../components/patterns';
 import FloatingCard from '../components/FloatingCard';
-import PromiseTabs from '../components/PromiseTabs';
-import TranslatedContent from '../components/TranslatedContent';
 import MissionOrbitalCarousel from '../components/features/about/MissionOrbitalCarousel';
 import { generateWebPageSchema } from '../utils/seoUtils';
 
@@ -510,7 +508,7 @@ export default function AboutPage() {
                 transition={{ delay: 0.4 }}
               >
                 <h3 className="text-3xl font-bold text-white mb-4 inline-block relative">
-                  <span className="relative z-10">iLight Staff</span>
+                  <span className="relative z-10">Team Members</span>
                 </h3>
                 <p className="text-white/80 text-lg max-w-3xl mx-auto">
                   Some of the passionate team members committed to actively make a difference in delivering the Mission and Vision
