@@ -488,7 +488,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="mb-16 text-center"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">The iLight illuminator</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">The iLight illuminators</h2>
               
               <GlassCard className="max-w-4xl mx-auto mb-8" opacity={0.1} blur="md" textShadow enhancedContrast={true}>
                 <p className="text-xl text-white leading-relaxed mb-4">
