@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Footer() {
@@ -26,6 +26,15 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold text-white mb-6">Contact Us</h3>
             <ul className="space-y-5">
+              <li className="flex items-center space-x-4 group">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <a href="tel:+18587860288" 
+                  className="text-white/90 hover:text-white transition-colors">
+                  +1 (858) 786-0288
+                </a>
+              </li>
               <li className="flex items-center space-x-4 group">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <Mail className="w-5 h-5 text-white" />
