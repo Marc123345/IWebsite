@@ -16,6 +16,7 @@ import Flex from '../components/Flex';
 import SectionHeading from '../components/SectionHeading';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import TranslatedContent from '../components/TranslatedContent';
 import {
   GlassCard, 
   ParallaxEffect, 
