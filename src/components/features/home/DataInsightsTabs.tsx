@@ -22,7 +22,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
       title: 'Pattern Recognition',
       icon: <Brain className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
-      inactiveColor: 'bg-neutral-800 text-ilight-500/70 border-neutral-700',
+      inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
         title: 'Identifying Emotional Patterns',
         description: 'Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.',
@@ -39,7 +39,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
       title: 'Personalized Insights',
       icon: <Target className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
-      inactiveColor: 'bg-neutral-800 text-ilight-500/70 border-neutral-700',
+      inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
         title: 'Tailored Recommendations',
         description: 'These insights guide tailored recommendations, match users to the right providers or peer support, and track improvements week by week.',
@@ -56,7 +56,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
       title: 'Continuous Learning',
       icon: <Activity className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
-      inactiveColor: 'bg-neutral-800 text-ilight-500/70 border-neutral-700',
+      inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
         title: 'Evolving With You',
         description: 'Our system continuously learns from interactions, improving its ability to provide relevant support and measuring outcomes over time.',
@@ -75,7 +75,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
       {/* Tabs Navigation - Mobile-friendly scrollable tabs */}
       <div className="relative flex items-center justify-between max-w-md mx-auto mb-6 overflow-x-auto pb-2 scrollbar-hide">
         {/* Horizontal Line */}
-        <div className="absolute top-1/2 left-0 h-1 bg-neutral-700/50 w-full" style={{ transform: 'translateY(-50%)' }}>
+        <div className="absolute top-1/2 left-0 h-1 bg-gray-200 w-full" style={{ transform: 'translateY(-50%)' }}>
           <motion.div 
             className="h-full bg-ilight-500 transition-all duration-700 ease-out"
             animate={{ width: `${(activeTab / (tabs.length - 1)) * 100}%` }}
@@ -88,7 +88,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
             <button
               key={tab.id}
               aria-label={`View point: ${tab.title}`}
-              className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-ilight-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-darkest transition-transform duration-300 ease-out flex-shrink-0"
+              className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-ilight-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-transform duration-300 ease-out flex-shrink-0"
               style={{ 
                 transform: `scale(${activeTab === index ? 1.1 : 0.9})` 
               }}
@@ -99,7 +99,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
               }`}>
                 {tab.icon}
               </div>
-              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 whitespace-nowrap px-2 py-1 bg-neutral-900 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none">
+              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 whitespace-nowrap px-2 py-1 bg-ilight-600 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none">
                 {tab.title}
               </span>
             </button>
