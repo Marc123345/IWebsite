@@ -83,7 +83,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex space-x-4 md:space-x-8 relative">
+        <div className="flex space-x-4 md:space-x-8 relative z-10">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
