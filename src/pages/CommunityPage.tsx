@@ -211,7 +211,7 @@ export default function CommunityPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="mb-12 text-center mx-auto">
+                <div className="mb-16 text-center mx-auto">
                   <h2 className="font-bold mb-4 text-3xl md:text-4xl text-gray-800">Community Features</h2>
                   <div className="h-1 bg-ilight-500 rounded-full w-20 mb-6 mx-auto"></div>
                   <p className="text-gray-600 max-w-3xl text-lg md:text-xl mx-auto">Connect, share, and grow with others who understand your personal wellness journey.</p>
@@ -221,7 +221,7 @@ export default function CommunityPage() {
 
             <div className="max-w-6xl mx-auto">
               {communityFeatures.map((feature, index) => (
-                <div className="mb-20\" key={feature.title}>
+                <div className="mb-40" key={feature.title}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -274,10 +274,11 @@ export default function CommunityPage() {
             align="center"
             withDivider
             textColor="text-black"
+            className="mb-16"
           />
 
           <div className="max-w-6xl mx-auto">
-            <CommunityConnectionMap className="mb-8 shadow-lg rounded-lg" />
+            <CommunityConnectionMap className="mb-16 shadow-lg rounded-lg" />
 
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -310,6 +311,7 @@ export default function CommunityPage() {
           padding="lg"
           withPattern
           patternType="dots"
+          className="mt-16"
         >
           <SectionHeading
             title="How Our Community Works"
@@ -317,6 +319,7 @@ export default function CommunityPage() {
             align="center"
             withDivider
             textColor="text-black"
+            className="mb-16"
           />
           <CommunityFlow />
         </Section>
@@ -327,6 +330,7 @@ export default function CommunityPage() {
           padding="lg"
           gradientFrom="from-ilight-500"
           gradientTo="to-ilight-600"
+          className="mt-16"
         >
           <SectionHeading
             title="Breaking the Silence"
@@ -336,6 +340,7 @@ export default function CommunityPage() {
             gradientFrom="from-white"
             gradientTo="to-white/80"
             textColor="text-white"
+            className="mb-16"
           />
           
           <div className="max-w-4xl mx-auto">
@@ -376,6 +381,7 @@ export default function CommunityPage() {
           padding="lg"
           gradientFrom="from-ilight-600"
           gradientTo="to-ilight-700"
+          className="mt-16"
         >
           <SectionHeading
             title="Community Impact"
@@ -385,6 +391,7 @@ export default function CommunityPage() {
             gradientFrom="from-white"
             gradientTo="to-white/80"
             textColor="text-white"
+            className="mb-16"
           />
           
           <div className="max-w-4xl mx-auto">
@@ -420,7 +427,7 @@ export default function CommunityPage() {
         </Section>
 
         {/* CTA Section */}
-        <Section background="white" padding="lg">
+        <Section background="white" padding="lg" className="mt-16">
           <Container size="md">
             <div className="bg-gradient-to-br from-ilight-500 to-ilight-600 rounded-3xl p-10 md:p-12 shadow-xl text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Community</h2>
