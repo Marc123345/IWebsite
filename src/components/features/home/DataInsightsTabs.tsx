@@ -73,9 +73,9 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
   return (
     <div className={`${className}`}>
       {/* Tabs Navigation - Mobile-friendly scrollable tabs */}
-      <div className="relative flex items-center justify-between max-w-md mx-auto mb-6 overflow-x-auto pb-2 scrollbar-hide">
+      <div className="relative flex items-center justify-between max-w-md mx-auto mb-8 overflow-x-auto pb-4 scrollbar-hide">
         {/* Horizontal Line */}
-        <div className="absolute top-1/2 left-0 h-1 bg-gray-200 w-full" style={{ transform: 'translateY(-50%)' }}>
+        <div className="absolute top-1/2 left-0 h-1 bg-gray-200 w-full z-0" style={{ transform: 'translateY(-50%)' }}>
           <motion.div 
             className="h-full bg-ilight-500 transition-all duration-700 ease-out"
             animate={{ width: `${(activeTab / (tabs.length - 1)) * 100}%` }}
@@ -83,7 +83,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex space-x-4 md:space-x-8 relative z-10">
+        <div className="flex space-x-6 md:space-x-10 relative z-10">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
@@ -94,12 +94,12 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
               }}
               onClick={() => setActiveTab(index)}
             >
-              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors duration-300 ease-out border-2 group-hover:shadow-lg group-hover:shadow-ilight-500/30 ${
+              <div className={`w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-colors duration-300 ease-out border-2 group-hover:shadow-lg group-hover:shadow-ilight-500/30 ${
                 activeTab === index ? tab.color : tab.inactiveColor
               }`}>
                 {tab.icon}
               </div>
-              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 whitespace-nowrap px-2 py-1 bg-ilight-600 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none">
+              <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 whitespace-nowrap px-2 py-1 bg-ilight-600 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
                 {tab.title}
               </span>
             </button>
@@ -117,12 +117,12 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto"
         >
-          <div className="flex flex-col md:flex-row items-start gap-4 mb-4">
-            <div className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center bg-ilight-50 text-ilight-500 mx-auto md:mx-0">
+          <div className="flex flex-col md:flex-row items-start gap-4 mb-6">
+            <div className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center bg-ilight-50 text-ilight-500 mx-auto md:mx-0">
               {tabs[activeTab].icon}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-ilight-700 mb-2 text-center md:text-left">
+              <h3 className="text-xl font-bold text-ilight-700 mb-3 text-center md:text-left">
                 {tabs[activeTab].content.title}
               </h3>
               <p className="text-ilight-600 text-base text-center md:text-left">
@@ -131,14 +131,14 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
             </div>
           </div>
 
-          <div className="mt-4 grid md:grid-cols-2 gap-3">
+          <div className="mt-6 grid md:grid-cols-2 gap-3">
             {tabs[activeTab].content.points.map((point, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-2 bg-ilight-50 p-3 rounded-lg"
+                className="flex items-start gap-3 bg-ilight-50 p-4 rounded-lg"
               >
                 <CheckCircle2 className="w-5 h-5 text-ilight-500 flex-shrink-0 mt-0.5" />
                 <span className="text-ilight-700">{point}</span>
