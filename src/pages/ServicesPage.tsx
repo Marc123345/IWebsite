@@ -31,7 +31,7 @@ export default function ServicesPage() {
       // UPDATED Description (Source 7 consistency)
       description: "Our premium platform aims to harness the power of data science, machine learning, and AI to deliver a personalized care support and continuum experience.",
       image: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
-      link: "/ilight-plus", // This should ideally link to a page detailing iLight+ or AI tech
+      link: "/how-it-works/ai", // Updated link to correct path
       isReversed: false
     },
     {
@@ -237,7 +237,7 @@ export default function ServicesPage() {
 
             <div className="max-w-6xl mx-auto">
               {serviceComponents.map((service, index) => (
-                <div className="mb-16 md:mb-20\" key={service.title}> {/* Adjusted margin */}
+                <div className="mb-16 md:mb-32" key={service.title}> {/* Adjusted margin */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

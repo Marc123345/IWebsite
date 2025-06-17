@@ -181,7 +181,7 @@ export default function HomePage() {
       title: "Innovative Therapy Solutions",
       description: "We're pioneering new approaches to personal therapy solutions through technology, community, and compassionate care.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
-      link: "/about/impact",
+      link: "/about",
       isReversed: false
     },
     {
@@ -497,6 +497,7 @@ export default function HomePage() {
                 align="center"
                 withDivider
                 textColor="text-black"
+                className="mb-16"
               />
             </motion.div>
 

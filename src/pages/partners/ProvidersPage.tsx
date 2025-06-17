@@ -31,7 +31,7 @@ export default function ProvidersPage() {
       <SEO 
         title="For Emotional Well-being Providers - iLight Partners"
         description="Transform your therapy solution with iLight's innovative platform that enhances client engagement, streamlines administration, and improves therapy outcomes."
-        canonical="/providers"
+        canonical="/partners/providers"
         schema={schema}
       />
       <div className="min-h-screen">
