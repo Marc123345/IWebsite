@@ -742,11 +742,12 @@ export default function AboutPage() {
             align="center"
             withDivider
             textColor="text-black"
+            className="mb-16"
           />
 
           <div className="max-w-6xl mx-auto">
             {impactAreas.map((area, index) => (
-              <div className="mb-20\" key={area.title}>
+              <div className="mb-32" key={area.title}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
