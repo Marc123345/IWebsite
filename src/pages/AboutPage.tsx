@@ -159,7 +159,7 @@ export default function AboutPage() {
       title: "Innovative Therapy Solutions",
       description: "We're pioneering new approaches to personal therapy solutions through technology, community, and compassionate care.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
-      link: "/about/impact",
+      link: "/services",
       isReversed: false
     },
     {
@@ -420,6 +420,7 @@ export default function AboutPage() {
                 align="center"
                 withDivider
                 textColor="text-black"
+                className="mb-16"
               />
             </motion.div>
 
@@ -434,7 +435,7 @@ export default function AboutPage() {
           padding="lg"
           gradientFrom="from-ilight-700"
           gradientTo="to-ilight-800"
-          className="relative overflow-hidden"
+          className="relative overflow-hidden mt-16"
         >
           {/* Animated background elements */}
           <motion.div 
@@ -735,6 +736,7 @@ export default function AboutPage() {
           padding="lg"
           withPattern
           patternType="dots"
+          className="mt-16"
         >
           <SectionHeading
             title="Our Impact"
@@ -788,7 +790,7 @@ export default function AboutPage() {
         </Section>
 
         {/* CTA Section */}
-        <Section background="white" padding="lg">
+        <Section background="white" padding="lg" className="mt-16">
           <div className="max-w-4xl mx-auto text-center">
             <Card
               variant="gradient"
