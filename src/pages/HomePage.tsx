@@ -74,20 +74,6 @@ export default function HomePage() {
       ]
     },
     {
-      name: "Eli",
-      surname: "Berman",
-      role: "Product and UX",
-      image: "https://ik.imagekit.io/qcvroy8xpd/Container%20(1).png?updatedAt=1748950237978",
-      description: "Product Manager and strategic advisor with expertise in healthcare innovations and building sustainable business models. Former Special Forces with a unique combination of technical knowledge and entrepreneurial drive, focused on creating real value for users.",
-      linkedin: "https://www.linkedin.com/in/eli-berman/",
-      email: "eli@ilight.health",
-      achievements: [
-        "Product development specialist",
-        "Former Special Forces",
-        "Excel Fellow at Reichman University"
-      ]
-    },
-    {
       name: "Yaron",
       surname: "Eisenberg",
       role: "Communication & Stakeholder Relations",
