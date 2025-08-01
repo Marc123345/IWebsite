@@ -112,7 +112,7 @@ export default function AboutPage() {
       name: "Jayden",
       surname: "Youngleson",
       role: "Fundraising & Network Partnerships",
-      image: "https://ik.imagekit.io/qcvroy8xpd/Container%20(4).png?updatedAt=1748950237767",
+      image: "https://ik.imagekit.io/qcvroy8xpd/e5035a52-d90d-411f-a80b-4691ae622b18%201.png?updatedAt=1754054086723",
       description: "Strategic investment professional specializing in healthcare technology and wellness innovations. Director at TANJ Capital, focusing on identifying and developing transformative opportunities in digital health. Committed to bridging the gap between innovative wellness solutions and sustainable business growth.",
       linkedin: "https://www.linkedin.com/in/jayden-youngleson-06b940246/",
       email: "jayden@ilight.health",
