@@ -325,7 +325,7 @@ export default function HomePage() {
             )}
             <video
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
-              src="https://res.cloudinary.com/dadgglcaq/video/upload/v1745230896/envato_video_gen_Apr_21_2025_10_15_27_qnjsry.mp4"
+              src="https://ik.imagekit.io/qcvroy8xpd/iLight%20Hero.mp4?updatedAt=1754396716668"
               autoPlay
               loop
               muted
