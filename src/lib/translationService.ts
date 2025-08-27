@@ -72,10 +72,12 @@ class TranslationService {
         };
       }
       
-      // Use direct Google Translate API call
-      const apiKey = import.meta.env.VITE_GOOGLE_TRANSLATION_API_KEY;
-      if (!apiKey) {
-        console.warn('Google Translate API key not found, using fallback');
+      // Use Supabase Edge Function for translation
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      
+      if (!supabaseUrl || !supabaseKey) {
+        console.warn('Supabase configuration not found, using fallback');
         const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
         return {
           translatedText: fallbackText,
@@ -83,17 +85,17 @@ class TranslationService {
         };
       }
 
-      // Make direct call to Google Translate API
-      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
+      // Make call to Supabase Edge Function
+      const response = await fetch(`${supabaseUrl}/functions/v1/translate-text`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseKey}`,
         },
         body: JSON.stringify({
-          q: options.text,
-          target: options.targetLanguage,
-          source: options.sourceLanguage || 'en',
-          format: 'text'
+          text: options.text,
+          targetLanguage: options.targetLanguage,
+          sourceLanguage: options.sourceLanguage || 'en'
         })
       });
 
@@ -107,7 +109,17 @@ class TranslationService {
       }
 
       const data = await response.json();
-      const translatedText = data.data.translations[0].translatedText;
+      
+      if (!data.success) {
+        console.warn('Translation service error, using fallback');
+        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
+        return {
+          translatedText: fallbackText,
+          success: true
+        };
+      }
+      
+      const translatedText = data.translatedText;
       
       // Cache the translation
       if (translatedText !== options.text) {
@@ -116,7 +128,7 @@ class TranslationService {
       
       return {
         translatedText: translatedText,
-        detectedSourceLanguage: data.data.translations[0].detectedSourceLanguage,
+        detectedSourceLanguage: data.detectedSourceLanguage,
         success: true
       };
 

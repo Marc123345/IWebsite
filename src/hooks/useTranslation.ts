@@ -42,6 +42,17 @@ export default function useTranslation(): UseTranslationReturn {
 
   const setCurrentLanguage = (language: string) => {
     i18n.changeLanguage(language);
+    // Store preference in localStorage
+    localStorage.setItem('preferred_language', language);
+    
+    // Update document direction for RTL languages
+    if (language === 'he') {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'he';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = 'en';
+    }
   };
 
   return {

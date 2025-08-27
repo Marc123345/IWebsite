@@ -1,4 +1,5 @@
 import { ReactNode, useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import useTranslation from '../hooks/useTranslation';
 
 interface TranslatedContentProps {
@@ -7,6 +8,7 @@ interface TranslatedContentProps {
   targetLanguage?: string;
   sourceLanguage?: string;
   dynamicContent?: boolean;
+  translationKey?: string;
 }
 
 /**
@@ -19,9 +21,11 @@ export default function TranslatedContent({
   targetLanguage,
   sourceLanguage = 'en',
   dynamicContent = false,
+  translationKey,
 }: TranslatedContentProps) {
   const [translatedText, setTranslatedText] = useState<string>('');
   const { translate, currentLanguage } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const performTranslation = async () => {
@@ -51,7 +55,7 @@ export default function TranslatedContent({
     };
 
     performTranslation();
-  }, [children, currentLanguage, targetLanguage, sourceLanguage, translate, dynamicContent]);
+  }, [children, currentLanguage, targetLanguage, sourceLanguage, translate, dynamicContent, i18n.language]);
 
   // If children is not a string, render directly
   if (typeof children !== 'string') {
@@ -59,6 +63,15 @@ export default function TranslatedContent({
       <div className={className}>
         {children}
       </div>
+    );
+  }
+
+  // Use i18next translation if translationKey is provided
+  if (translationKey) {
+    return (
+      <span className={className}>
+        {t(translationKey)}
+      </span>
     );
   }
 

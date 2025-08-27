@@ -42,8 +42,10 @@ export default function LanguageSelector({
     setCurrentLanguage(languageCode);
     setIsOpen(false);
     
-    // Store preference in localStorage for persistence
-    localStorage.setItem('preferred_language', languageCode);
+    // Force a page refresh to ensure all components re-render with new language
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   };
 
   if (variant === 'modal') {
