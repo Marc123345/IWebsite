@@ -23,8 +23,7 @@ export default function TranslatedContent({
   translationKey,
 }: TranslatedContentProps) {
   const [translatedText, setTranslatedText] = useState<string>('');
-  const { translate, currentLanguage } = useTranslation();
-  const { t, i18n } = useTranslation();
+  const { translate, currentLanguage, t } = useTranslation();
 
   useEffect(() => {
     const performTranslation = async () => {
@@ -54,7 +53,7 @@ export default function TranslatedContent({
     };
 
     performTranslation();
-  }, [children, currentLanguage, targetLanguage, sourceLanguage, translate, dynamicContent, i18n.language]);
+  }, [children, currentLanguage, targetLanguage, sourceLanguage, translate, dynamicContent]);
 
   // If children is not a string, render directly
   if (typeof children !== 'string') {
