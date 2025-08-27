@@ -4,8 +4,10 @@ import { Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
 import LanguageSelector from './LanguageSelector';
 import TranslatedContent from './TranslatedContent';
+import useTranslation from '../hooks/useTranslation';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -92,21 +94,6 @@ export default function Footer() {
                 <TranslatedContent dynamicContent={true}>Submit</TranslatedContent>
               </motion.button>
             </form>
-          </div>
-
-          {/* Language Selector */}
-          <div>
-            <h3 className="text-xl font-semibold text-white mb-6">
-              <TranslatedContent dynamicContent={true}>Language</TranslatedContent>
-            </h3>
-            <TranslatedContent className="text-white/90 mb-6" dynamicContent={true}>
-              Choose your preferred language for the website.
-            </TranslatedContent>
-            <LanguageSelector 
-              variant="dropdown" 
-              className="w-full"
-              showFlags={true}
-            />
           </div>
 
           {/* Language Selector */}
