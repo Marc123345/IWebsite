@@ -101,7 +101,8 @@ class TranslationService {
       return result;
 
     } catch (error) {
-      console.warn('Translation service unavailable, using fallback:', error);
+      console.warn('Translation API unavailable, using fallback:', error);
+      // Return fallback translation instead of throwing error
       return {
         translatedText: getFallbackTranslation(options.text, options.targetLanguage),
         success: true
