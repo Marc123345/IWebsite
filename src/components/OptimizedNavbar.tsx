@@ -11,6 +11,7 @@ import Logo from './Logo';
 import useScrollPosition from '../hooks/useScrollPosition';
 import useMediaQuery from '../hooks/useMediaQuery';
 import LanguageSelector from './LanguageSelector';
+import LanguageSelector from './LanguageSelector';
 
 interface MenuItem {
   path: string;
@@ -347,6 +348,19 @@ function OptimizedNavbar() {
                 </div>
               </div>
             </motion.div>
+            
+            {/* Language Selector */}
+            <div className="mt-8 p-4 bg-ilight-600/50 rounded-xl border border-white/10 max-w-md mx-auto">
+              <div className="flex items-start gap-3">
+                <Globe className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                <div className="flex-grow">
+                  <p className="text-white text-sm mb-3">
+                    Select your preferred language for translation:
+                  </p>
+                  <LanguageSelector variant="modal" compact={true} />
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

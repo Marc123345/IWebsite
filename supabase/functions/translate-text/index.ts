@@ -63,6 +63,19 @@ serve(async (req) => {
       )
     }
 
+    // Skip translation if target is the same as source or if it's English to English
+    if (targetLanguage === 'en' || (sourceLanguage && sourceLanguage === targetLanguage)) {
+      return new Response(
+        JSON.stringify({
+          translatedText: text,
+          success: true
+        }),
+        { 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      )
+    }
+
     // Prepare the request to Google Translate API
     const googleTranslateUrl = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`
     

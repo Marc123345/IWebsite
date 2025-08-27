@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import TranslatedText from './TranslatedText';
+import TranslatedText from './TranslatedText';
 
 interface TranslatedContentProps {
   children: ReactNode;
@@ -39,6 +40,22 @@ export default function TranslatedContent({
       targetLanguage={targetLanguage}
       sourceLanguage={sourceLanguage}
       className={className}
+}: TranslatedContentProps) {
+  // If translation is disabled or children is not a string, render directly
+  if (!enableTranslation || typeof children !== 'string') {
+    return (
+      <div className={className}>
+        {children}
+      </div>
+    );
+  }
+
+  // Use TranslatedText for string content
+  return (
+    <TranslatedText
+      targetLanguage={targetLanguage}
+      sourceLanguage={sourceLanguage}
+      className={className}
       fallbackToOriginal={true}
       showLoadingIndicator={false}
     >
@@ -47,5 +64,7 @@ export default function TranslatedContent({
   );
 }
 
+// Named export for the component
+export { TranslatedContent };
 // Named export for the component
 export { TranslatedContent };

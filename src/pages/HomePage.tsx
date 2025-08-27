@@ -390,7 +390,7 @@ export default function HomePage() {
               </motion.div>
 
               <GlassCard className="max-w-3xl mx-auto mb-4 md:mb-8" opacity={0.2} blur="lg" enhancedContrast={true}>
-                <TranslatedContent dynamicContent={true} className="text-white text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+                <TranslatedContent className="text-white text-base sm:text-lg md:text-xl font-medium leading-relaxed">
                   Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection.
                 </TranslatedContent>
               </GlassCard>

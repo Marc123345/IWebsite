@@ -51,6 +51,14 @@ export default function useTranslation(options: UseTranslationOptions = {}): Use
     loadSupportedLanguages();
   }, []);
 
+  // Load saved language preference
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('preferred_language');
+    if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
+      setCurrentLanguage(savedLanguage);
+    }
+  }, [supportedLanguages]);
+
   // Clear error function
   const clearError = useCallback(() => {
     setError(null);

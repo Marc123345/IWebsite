@@ -52,19 +52,7 @@ export default function LanguageSelector({
     
     // Store preference in localStorage for persistence
     localStorage.setItem('preferred_language', languageCode);
-    
-    // Trigger page refresh to apply translations
-    // In a production app, you might want to handle this more gracefully
-    window.location.reload();
   };
-
-  // Load saved language preference on mount
-  useState(() => {
-    const savedLanguage = localStorage.getItem('preferred_language');
-    if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
-      setCurrentLanguage(savedLanguage);
-    }
-  });
 
   if (variant === 'modal') {
     return (
