@@ -23,6 +23,12 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   // Mission & Vision
   'Our Mission': { 'he': 'המשימה שלנו' },
   'The Right Care to the Right Person at the Right Time': { 'he': 'הטיפול הנכון לאדם הנכון בזמן הנכון' },
+  'THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME': { 'he': 'הטיפול הנכון לאדם הנכון בזמן הנכון' },
+  'RIGHT CARE': { 'he': 'הטיפול הנכון' },
+  'TO THE': { 'he': 'לאדם' },
+  'RIGHT PERSON': { 'he': 'הנכון' },
+  'AT THE': { 'he': 'בזמן' },
+  'RIGHT TIME': { 'he': 'הנכון' },
   'HOW MANY LIVES DID YOU ILLUMINATE TODAY?': { 'he': 'כמה חיים הארת היום?' },
   'ILIGHT….the future of data driven, personalized, life care solutions.': { 'he': 'ILIGHT....העתיד של פתרונות טיפול חיים מותאמים אישית מונעי נתונים.' },
 
