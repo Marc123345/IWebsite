@@ -11,7 +11,6 @@ import Logo from './Logo';
 import useScrollPosition from '../hooks/useScrollPosition';
 import useMediaQuery from '../hooks/useMediaQuery';
 import LanguageSelector from './LanguageSelector';
-import LanguageSelector from './LanguageSelector';
 
 interface MenuItem {
   path: string;
