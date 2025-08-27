@@ -40,6 +40,7 @@ export default function TranslatedContent({
       targetLanguage={targetLanguage}
       sourceLanguage={sourceLanguage}
       className={className}
+  )
 }: TranslatedContentProps) {
   // If translation is disabled or children is not a string, render directly
   if (!enableTranslation || typeof children !== 'string') {
