@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TranslatedContent from './TranslatedContent';
 
 export default function SkipLink() {
   return (
