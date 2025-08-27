@@ -71,12 +71,14 @@ class TranslationService {
           translatedText: cachedResult.translatedText,
           success: true
         };
-      */
       }
+      
       // Return original text on any error
-      return text;
+      return {
+        translatedText: options.text,
+        success: true
+      };
       // This prevents API calls that would fail due to missing configuration
-      return text;
       
       /* Commented out API call until proper configuration is available
       const response = await fetch(this.API_ENDPOINT, {
@@ -104,6 +106,7 @@ class TranslationService {
       }
 
       return result;
+      */
 
     } catch (error) {
       console.warn('Translation API unavailable, using fallback:', error);
