@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
+import LanguageSelector from './LanguageSelector';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -86,6 +87,19 @@ export default function Footer() {
                 Submit
               </motion.button>
             </form>
+          </div>
+
+          {/* Language Selector */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-6">Language</h3>
+            <p className="text-white/90 mb-6">
+              Choose your preferred language for the website.
+            </p>
+            <LanguageSelector 
+              variant="dropdown" 
+              className="w-full"
+              showFlags={true}
+            />
           </div>
         </div>
 
