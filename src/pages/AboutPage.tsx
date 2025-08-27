@@ -348,6 +348,7 @@ export default function AboutPage() {
                       Transforming personal wellness therapy solutions through innovation, compassion, and accessibility.
                     </TranslatedContent>
                   </p>
+               </GlassCard>
                 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
