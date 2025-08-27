@@ -381,6 +381,7 @@ class SecureTokenStorage {
   private async clearSecureStorage(): Promise<void> {
     sessionStorage.removeItem(this.STORAGE_KEY);
   }
+}
 
 // Create singleton instance for token storage
 export const tokenStorage = new SecureTokenStorage();
