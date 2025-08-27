@@ -347,7 +347,7 @@ export default function AboutPage() {
                     <TranslatedContent dynamicContent={true}>
                       Transforming personal wellness therapy solutions through innovation, compassion, and accessibility.
                     </TranslatedContent>
-                </GlassCard>
+                  </p>
                 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
