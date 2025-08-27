@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import TranslatedContent from '../../TranslatedContent';
 
 interface PlatformComponent {
   title: string;
@@ -83,7 +84,7 @@ export default function PlatformComponentsSection({
                   
                   {/* Description with Responsive Typography */}
                   <div className="text-sm sm:text-base font-light lg:text-lg xl:leading-[32px]">
-                    <p className="text-black">{component.description}</p>
+                    <TranslatedContent className="text-black" dynamicContent={true}>{component.description}</TranslatedContent>
                   </div>
                   
                   {/* CTA Button with Responsive Spacing */}
@@ -92,7 +93,7 @@ export default function PlatformComponentsSection({
                       to={component.link}
                       className="px-4 sm:px-5 py-2 sm:py-[10px] text-sm sm:text-base flex justify-center items-center group space-x-2 sm:space-x-3 rounded-full transition duration-300 ease-in-out transform border border-ilight-600 text-white bg-ilight-600 hover:bg-transparent hover:text-ilight-700"
                     >
-                      <span>Learn More</span>
+                      <TranslatedContent dynamicContent={true}>Learn More</TranslatedContent>
                       <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>

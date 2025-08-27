@@ -18,9 +18,9 @@ export default function Footer() {
                 <Logo variant="light" size="lg" />
               </motion.div>
             </div>
-            <p className="mt-4 text-white/90 leading-relaxed">
+            <TranslatedContent className="mt-4 text-white/90 leading-relaxed" dynamicContent={true}>
               iLIGHT is a mission driven organization aiming to spread the viral and purpose driven power, message and actions by "Lighting up the Lives" of people impacted by personal challenges.
-            </p>
+            </TranslatedContent>
           </div>
 
           {/* Contact Info */}
@@ -51,9 +51,9 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h3 className="text-xl font-semibold text-white mb-6">Stay Updated</h3>
-            <p className="text-white/90 mb-6">
+            <TranslatedContent className="text-white/90 mb-6" dynamicContent={true}>
               Subscribe to our newsletter for the latest updates as part of the ILIGHT Community.
-            </p>
+            </TranslatedContent>
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div className="relative">
                 <input

@@ -11,6 +11,7 @@ import Logo from './Logo';
 import useScrollPosition from '../hooks/useScrollPosition';
 import useMediaQuery from '../hooks/useMediaQuery';
 import LanguageSelector from './LanguageSelector';
+import TranslatedContent from './TranslatedContent';
 
 interface MenuItem {
   path: string;
@@ -288,9 +289,13 @@ function OptimizedNavbar() {
                           {item.icon}
                         </div>
                         <div className="flex-grow">
-                          <div className="font-bold text-lg">{item.label}</div>
+                          <div className="font-bold text-lg">
+                            <TranslatedContent dynamicContent={true}>{item.label}</TranslatedContent>
+                          </div>
                           {item.description && (
-                            <div className="text-sm text-white/90">{item.description}</div>
+                            <div className="text-sm text-white/90">
+                              <TranslatedContent dynamicContent={true}>{item.description}</TranslatedContent>
+                            </div>
                           )}
                         </div>
                         {item.subItems && (
@@ -330,9 +335,13 @@ function OptimizedNavbar() {
                                     {subItem.icon}
                                   </div>
                                   <div className="flex-grow">
-                                    <div className="font-bold">{subItem.label}</div>
+                                    <div className="font-bold">
+                                      <TranslatedContent dynamicContent={true}>{subItem.label}</TranslatedContent>
+                                    </div>
                                     {subItem.description && (
-                                      <div className="text-sm text-white/90">{subItem.description}</div>
+                                      <div className="text-sm text-white/90">
+                                        <TranslatedContent dynamicContent={true}>{subItem.description}</TranslatedContent>
+                                      </div>
                                     )}
                                   </div>
                                 </Link>
@@ -351,9 +360,9 @@ function OptimizedNavbar() {
                 <div className="flex items-start gap-3">
                   <Globe className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
                   <div className="flex-grow">
-                    <p className="text-white text-sm mb-3">
+                    <TranslatedContent className="text-white text-sm mb-3" dynamicContent={true}>
                       Select your preferred language for translation:
-                    </p>
+                    </TranslatedContent>
                     <LanguageSelector variant="modal" compact={true} />
                   </div>
                 </div>
