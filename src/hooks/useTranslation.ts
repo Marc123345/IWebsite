@@ -32,8 +32,10 @@ interface UseTranslationReturn {
 export default function useTranslation(options: UseTranslationOptions = {}): UseTranslationReturn {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [currentLanguage, setCurrentLanguage] = useState(options.targetLanguage || 'en');
-  const [supportedLanguages, setSupportedLanguages] = useState<string[]>([]);
+  const [currentLanguage, setCurrentLanguageState] = useState(options.targetLanguage || 'en');
+  const [supportedLanguages, setSupportedLanguages] = useState<string[]>([
+    'en', 'es', 'fr', 'de', 'it', 'pt', 'he', 'ar', 'zh', 'ja'
+  ]);
 
   // Load supported languages on mount
   useEffect(() => {
@@ -43,8 +45,7 @@ export default function useTranslation(options: UseTranslationOptions = {}): Use
         setSupportedLanguages(languages);
       } catch (err) {
         console.warn('Failed to load supported languages:', err);
-        // Fallback to common languages
-        setSupportedLanguages(['en', 'es', 'fr', 'de', 'it', 'pt', 'he']);
+        // Keep fallback languages
       }
     };
 
@@ -55,9 +56,15 @@ export default function useTranslation(options: UseTranslationOptions = {}): Use
   useEffect(() => {
     const savedLanguage = localStorage.getItem('preferred_language');
     if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
-      setCurrentLanguage(savedLanguage);
+      setCurrentLanguageState(savedLanguage);
     }
   }, [supportedLanguages]);
+
+  // Save language preference when it changes
+  const setCurrentLanguage = useCallback((language: string) => {
+    setCurrentLanguageState(language);
+    localStorage.setItem('preferred_language', language);
+  }, []);
 
   // Clear error function
   const clearError = useCallback(() => {

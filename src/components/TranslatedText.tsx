@@ -82,31 +82,13 @@ export default function TranslatedText({
     performTranslation();
   }, [children, effectiveTargetLanguage, sourceLanguage, translate, fallbackToOriginal]);
 
-  // Retry translation function
-  const retryTranslation = () => {
-    setTranslationError(null);
-    // Trigger re-translation by updating a dependency
-    const performRetry = async () => {
-      setIsTranslating(true);
-      try {
-        const result = await translate(children, {
-          targetLanguage: effectiveTargetLanguage,
-          sourceLanguage
-        });
-        setTranslatedText(result);
-        setTranslationError(null);
-      } catch (error) {
-        setTranslationError(error instanceof Error ? error.message : 'Translation failed');
-      } finally {
-        setIsTranslating(false);
-      }
-    };
-    
-    performRetry();
-  };
+  // Don't translate if target language is English
+  if (effectiveTargetLanguage === 'en' || effectiveTargetLanguage === sourceLanguage) {
+    return <Component className={className}>{children}</Component>;
+  }
 
-  // Show loading indicator
-  if ((isTranslating || serviceLoading) && showLoadingIndicator) {
+  // Show loading state
+  if (isTranslating && showLoadingIndicator) {
     return (
       <Component className={`inline-flex items-center gap-2 ${className}`}>
         <Loader2 className="w-4 h-4 animate-spin text-ilight-500" />
@@ -115,14 +97,32 @@ export default function TranslatedText({
     );
   }
 
-  // Show error state with retry option
+  // Show error state with retry
   if (translationError && enableRetry && !fallbackToOriginal) {
     return (
       <Component className={`inline-flex items-center gap-2 ${className}`}>
         <AlertCircle className="w-4 h-4 text-red-500" />
         <span className="text-red-600">Translation failed</span>
         <button
-          onClick={retryTranslation}
+          onClick={() => {
+            setTranslationError(null);
+            // Re-trigger translation
+            const retryTranslation = async () => {
+              setIsTranslating(true);
+              try {
+                const result = await translate(children, {
+                  targetLanguage: effectiveTargetLanguage,
+                  sourceLanguage
+                });
+                setTranslatedText(result);
+              } catch (error) {
+                setTranslationError(error instanceof Error ? error.message : 'Translation failed');
+              } finally {
+                setIsTranslating(false);
+              }
+            };
+            retryTranslation();
+          }}
           className="text-ilight-500 hover:text-ilight-600 transition-colors"
           aria-label="Retry translation"
         >
@@ -132,15 +132,15 @@ export default function TranslatedText({
     );
   }
 
-  // Render translated text with smooth transition
+  // Render translated text
   return (
     <motion.div
       key={translatedText}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className={className}
       as={Component}
+      className={className}
     >
       {translatedText}
     </motion.div>

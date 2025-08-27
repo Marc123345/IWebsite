@@ -3,11 +3,7 @@ import TranslatedText from './TranslatedText';
 
 interface TranslatedContentProps {
   children: ReactNode;
-  i18nKey?: string;
-  ns?: string;
-  values?: Record<string, any>;
   className?: string;
-  dynamicContent?: boolean;
   targetLanguage?: string;
   sourceLanguage?: string;
   enableTranslation?: boolean;
@@ -46,6 +42,3 @@ export default function TranslatedContent({
     </TranslatedText>
   );
 }
-
-// Named export for the component
-export { TranslatedContent };
