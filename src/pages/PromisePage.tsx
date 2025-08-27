@@ -17,6 +17,7 @@ import {
   AnimatedBackground
 } from '../components/patterns';
 import PromiseTabs from '../components/PromiseTabs';
+import TranslatedContent from '../components/TranslatedContent';
 
 export default function PromisePage() {
   return (
