@@ -35,7 +35,8 @@ class TranslationService {
   private readonly API_ENDPOINT: string;
 
   constructor() {
-    this.API_ENDPOINT = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/translate-text`;
+    // Disable API endpoint for now since secrets aren't configured
+    this.API_ENDPOINT = '';
     this.loadCacheFromStorage();
   }
 
@@ -73,31 +74,19 @@ class TranslationService {
         };
       }
       
-      const response = await fetch(this.API_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify(options)
-      });
-
-      if (!response.ok) {
-        console.warn(`Translation API unavailable (${response.status}), using fallback`);
-        return {
-          translatedText: getFallbackTranslation(options.text, options.targetLanguage),
-          success: true
-        };
+      // For now, use fallback translations since Edge Function secrets aren't configured
+      console.info('Using fallback translation - Edge Function not configured');
+      const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
+      
+      // Cache the fallback translation
+      if (fallbackText !== options.text) {
+        this.cacheTranslation(cacheKey, fallbackText);
       }
-
-      const result: TranslationResult = await response.json();
-
-      // Cache successful translations
-      if (result.success && result.translatedText) {
-        this.cacheTranslation(cacheKey, result.translatedText);
-      }
-
-      return result;
+      
+      return {
+        translatedText: fallbackText,
+        success: true
+      };
 
     } catch (error) {
       console.warn('Translation API unavailable, using fallback:', error);
