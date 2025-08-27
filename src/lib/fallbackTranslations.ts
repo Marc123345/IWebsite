@@ -233,7 +233,7 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   },
   'Join our supportive community to normalize wellness discussions, access expert guidance, and connect with others who understand your journey.': {
     'he': 'הצטרף לקהילה התומכת שלנו כדי לנרמל דיונים על רווחה, לגשת להדרכה מומחית ולהתחבר לאחרים שמבינים את המסע שלך.',
-  }
+  },
   // Additional comprehensive translations
   'Skip to main content': {
     'he': 'דלג לתוכן הראשי',
