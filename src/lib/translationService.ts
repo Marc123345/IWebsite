@@ -32,11 +32,9 @@ class TranslationService {
   private cache: TranslationCache = {};
   private readonly CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
   private readonly MAX_CACHE_SIZE = 1000;
-  private readonly API_ENDPOINT: string;
+  private readonly USE_EDGE_FUNCTION = false; // Disable edge function for now
 
   constructor() {
-    // Use frontend environment variable for API key
-    this.API_ENDPOINT = 'https://translation.googleapis.com/language/translate/v2';
     this.loadCacheFromStorage();
   }
 
@@ -74,7 +72,7 @@ class TranslationService {
         };
       }
       
-      // Make direct API call to Google Translate
+      // Use direct Google Translate API call
       const apiKey = import.meta.env.VITE_GOOGLE_TRANSLATION_API_KEY;
       if (!apiKey) {
         console.warn('Google Translate API key not found, using fallback');
@@ -85,7 +83,8 @@ class TranslationService {
         };
       }
 
-      const response = await fetch(`${this.API_ENDPOINT}?key=${apiKey}`, {
+      // Make direct call to Google Translate API
+      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${apiKey}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
