@@ -486,6 +486,106 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   },
   'HELP US, HELP YOU, HELP OTHERS and be part of the PRICELESS PURPOSE of enriching lives together through delivering the RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.': {
     'he': 'עזור לנו, עזור לך, עזור לאחרים והיה חלק מהמטרה היקרה של העשרת חיים יחד באמצעות מתן הטיפול הנכון לאדם הנכון בזמן הנכון.',
+  },
+  // Hero tagline
+  'The Right Care to the Right Person at the Right Time': {
+    'he': 'הטיפול הנכון לאדם הנכון בזמן הנכון',
+  },
+  'The': {
+    'he': 'ה',
+  },
+  'Right': {
+    'he': 'נכון',
+  },
+  'Care': {
+    'he': 'טיפול',
+  },
+  'to': {
+    'he': 'ל',
+  },
+  'the': {
+    'he': 'ה',
+  },
+  'Person': {
+    'he': 'אדם',
+  },
+  'at': {
+    'he': 'ב',
+  },
+  'Time': {
+    'he': 'זמן',
+  },
+  // Section titles
+  'HOW MANY LIVES DID YOU ILLUMINATE TODAY?': {
+    'he': 'כמה חיים הארת היום?',
+  },
+  'ILIGHT….the future of data driven, personalized, life care solutions.': {
+    'he': 'ILIGHT....העתיד של פתרונות טיפול חיים מותאמים אישית מונעי נתונים.',
+  },
+  'PROVIDERS': {
+    'he': 'ספקים',
+  },
+  // Challenge section
+  'The Challenge of Self-Navigation': {
+    'he': 'האתגר של ניווט עצמי',
+  },
+  'Critical Choices': {
+    'he': 'בחירות קריטיות',
+  },
+  'Inconsistent Progress': {
+    'he': 'התקדמות לא עקבית',
+  },
+  'Limited Guidance': {
+    'he': 'הדרכה מוגבלת',
+  },
+  'Isolation': {
+    'he': 'בידוד',
+  },
+  // MyLight Solution section
+  'MyLight Solution': {
+    'he': 'פתרון MyLight',
+  },
+  'Personalized Guidance': {
+    'he': 'הדרכה מותאמת אישית',
+  },
+  'Progress Tracking': {
+    'he': 'מעקב התקדמות',
+  },
+  'Professional Support': {
+    'he': 'תמיכה מקצועית',
+  },
+  'Community Connection': {
+    'he': 'חיבור קהילתי',
+  },
+  // Data insights section
+  'How iLight Uses Data to Drive Better Outcomes': {
+    'he': 'איך iLight משתמש בנתונים כדי להניע תוצאות טובות יותר',
+  },
+  'We don\'t just collect data — we turn it into personalized care that works.': {
+    'he': 'אנחנו לא רק אוספים נתונים - אנחנו הופכים אותם לטיפול מותאם אישית שעובד.',
+  },
+  'Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.': {
+    'he': 'הבינה המלאכותית שלנו מזהה דפוסים בהתנהגות המשתמש - מהמילים שהם מקלידים ועד לתדירות האינטראקציה שלהם - כדי לזהות אותות רווחה אישית בזמן אמת.',
+  },
+  // Platform component descriptions
+  'A place to share, heal, and grow. Connect with people who understand your journey and celebrate your progress. iLight\'s fundamental imperative is to not only provide a safe environment for personalized enrichment but importantly stimulate a purpose driven setting to Help Us, Help You, Help Others.': {
+    'he': 'מקום לשתף, לרפא ולצמוח. התחבר לאנשים שמבינים את המסע שלך וחוגגים את ההתקדמות שלך. הציווי הבסיסי של iLight הוא לא רק לספק סביבה בטוחה להעשרה אישית אלא חשוב לעורר סביבה מונעת מטרה לעזור לנו, לעזור לך, לעזור לאחרים.',
+  },
+  'A network of vetted therapy providers and solutions who care about your unique needs and are committed to providing high-quality care and measurable outcomes.': {
+    'he': 'רשת של ספקי טיפול ופתרונות מאומתים שדואגים לצרכים הייחודיים שלך ומחויבים לספק טיפול איכותי ותוצאות מדידות.',
+  },
+  'Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way.': {
+    'he': 'הבן לוויה האישי שלך לריפוי וחוסן—מציע הדרכה, עידוד והבנה בכל שלב בדרך.',
+  },
+  'Our premium platform aims to harness the power of data science, machine learning, and AI to deliver a personalized care support and continuum experience.': {
+    'he': 'הפלטפורמה הפרימיום שלנו שואפת לרתום את כוח מדעי הנתונים, למידת מכונה ובינה מלאכותית כדי לספק חוויית תמיכה וטיפול מותאמת אישית.',
+  },
+  // Footer disclaimer
+  'Platform Status:': {
+    'he': 'סטטוס פלטפורמה:',
+  },
+  'Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform\'s capabilities.': {
+    'he': 'חלק מהתכונות המוזכרות באתר זה, כולל אלמנטים מסוימים של גיימיפיקציה ותגמולים, נמצאים כעת בפיתוח ויושקו בהדרגה. אנו עובדים ברציפות לשפר ולהרחיב את יכולות הפלטפורמה שלנו.',
   }
 };
 
