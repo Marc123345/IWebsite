@@ -377,15 +377,17 @@ export default function HomePage() {
               >
                 <h1 className="sr-only">The Right Care to the Right Person at the Right Time</h1>
                 <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-                  {["The", "Right", "Care", "to", "the", "Right", "Person", "at", "the", "Right", "Time"].map((word, i) => (
-                    <motion.span
-                      key={i}
-                      variants={titleWord}
-                      className="font-serif text-white text-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold inline-block"
-                    >
-                      {word}
-                    </motion.span>
-                  ))}
+                  <TranslatedContent dynamicContent={true}>
+                    {["The", "Right", "Care", "to", "the", "Right", "Person", "at", "the", "Right", "Time"].map((word, i) => (
+                      <motion.span
+                        key={i}
+                        variants={titleWord}
+                        className="font-serif text-white text-shadow-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold inline-block"
+                      >
+                        {word}{" "}
+                      </motion.span>
+                    ))}
+                  </TranslatedContent>
                 </div>
               </motion.div>
 
@@ -394,6 +396,211 @@ export default function HomePage() {
                   Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection.
                 </TranslatedContent>
               </GlassCard>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-8">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    as={Link}
+                    to="/contact?type=careseeker"
+                    variant="gradient"
+                    size="lg"
+                    rounded="full"
+                    icon={<Heart className="w-5 h-5" />}
+                    withShimmer
+                    className="shadow-xl w-full sm:w-auto"
+                  >
+                    <TranslatedContent dynamicContent={true}>Get Therapy Solutions</TranslatedContent>
+                  </Button>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    as={Link}
+                    to="/contact?type=caregiver"
+                    variant="outline"
+                    size="lg"
+                    rounded="full"
+                    icon={<Shield className="w-5 h-5" />}
+                    className="border-white/40 text-white hover:bg-white/10 shadow-xl w-full sm:w-auto"
+                  >
+                    <TranslatedContent dynamicContent={true}>Partners</TranslatedContent>
+                  </Button>
+                </motion.div>
+              </div>
+              
+              {/* Scroll indicator */}
+              <motion.div
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                style={{ opacity: Math.max(0, 1 - scrollY * 0.01) }}
+              >
+                <div className="flex flex-col items-center text-white/70">
+                  <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-center justify-center mb-2">
+                    <motion.span
+                      className="w-1.5 h-1.5 bg-white rounded-full"
+                      animate={{ y: [0, 15, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    />
+                  </div>
+                  <span className="text-xs font-light">Scroll</span>
+                  <span className="text-xs font-light"><TranslatedContent dynamicContent={true}>Scroll</TranslatedContent></span>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Mission Statement Section */}
+        <MissionStatement />
+
+        {/* Mission Journey Visualization */}
+        <MissionJourneyVisualization />
+
+        {/* Challenges and Solutions Section */}
+        <ChallengesSolutionsSection />
+
+        {/* Data-Driven Insights Section */}
+        <Section
+          background="light"
+          padding="lg"
+          withPattern
+          patternType="dots"
+          className="py-16 md:py-24 lg:py-32"
+        >
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <SectionHeading
+                title={<TranslatedContent dynamicContent={true}>How iLight Uses Data to Drive Better Outcomes</TranslatedContent>}
+                description={<TranslatedContent dynamicContent={true}>We don't just collect data — we turn it into personalized care that works.</TranslatedContent>}
+                align="center"
+                withDivider
+                textColor="text-black"
+                className="mb-16"
+              />
+            </motion.div>
+
+            <div className="mt-8">
+              <DataInsightsTabs />
+            </div>
+          </div>
+        </Section>
+
+        {/* Platform Components Section */}
+        <Section
+          background="white"
+          padding="lg"
+          className="py-16 md:py-24 lg:py-32"
+        >
+          <div className="max-w-6xl mx-auto text-center">
+            <PlatformComponentsSection components={platformComponents} />
+          </div>
+        </Section>
+
+        {/* CTA Section */}
+        <Section 
+          background="white" 
+          padding="lg" 
+          textAlign="center"
+          className="py-16 md:py-24 lg:py-32"
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <Card
+                variant="gradient"
+                shadow="lg"
+                padding="lg"
+                className="rounded-3xl overflow-hidden"
+                withShimmer
+                textAlign="center"
+              >
+                <div className="relative z-10">
+                  <SectionHeading
+                    title={<TranslatedContent dynamicContent={true}>Join Our Mission</TranslatedContent>}
+                    description={<TranslatedContent dynamicContent={true}>Be part of transforming personal wellness therapy solutions through innovation and compassion.</TranslatedContent>}
+                    align="center"
+                    withGradient
+                    gradientFrom="from-white"
+                    gradientTo="to-white/80"
+                    textColor="text-white"
+                  />
+                  
+                  <p className="text-xl text-white/90 mb-8 text-center">
+                    <TranslatedContent dynamicContent={true}>
+                    HELP US, HELP YOU, HELP OTHERS and be part of the PRICELESS PURPOSE of enriching lives together through delivering the RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.
+                    </TranslatedContent>
+                  </p>
+                  
+                  <div className="flex justify-center mt-6">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Button
+                        as={Link}
+                        to="/contact"
+                        variant="calm"
+                        size="lg"
+                        rounded="full"
+                        icon={<ArrowRight className="w-5 h-5" />}
+                        className="mx-auto shadow-xl"
+                      >
+                        <TranslatedContent dynamicContent={true}>Get Started</TranslatedContent>
+                      </Button>
+                    </motion.div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </Section>
+
+        {/* Platform Status Notice */}
+        <Section 
+          background="white" 
+          padding="md" 
+          textAlign="center"
+          className="py-8 md:py-12 lg:py-16"
+        >
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="bg-ilight-50 rounded-xl p-4 md:p-6 border border-ilight-100 shadow-calm">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+                  <Shield className="w-5 h-5 md:w-6 md:h-6 text-ilight-600 flex-shrink-0" />
+                  <div className="text-xs md:text-sm text-black">
+                    <p>
+                      <strong><TranslatedContent dynamicContent={true}>Platform Status:</TranslatedContent></strong> <TranslatedContent dynamicContent={true}>Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform's capabilities.</TranslatedContent>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Section>
+      </div>
+    </>
+  );
+}
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 md:mb-8">
                 <motion.div
