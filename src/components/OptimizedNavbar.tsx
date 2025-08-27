@@ -188,7 +188,20 @@ function OptimizedNavbar() {
               <Logo variant="light" size={isDesktop ? "lg" : "md"} />
             </motion.div>
 
-            {/* Menu Button */}
+            {/* Desktop Language Selector and Menu Button */}
+            <div className="flex items-center gap-4">
+              {/* Language Selector - Desktop Only */}
+              {isDesktop && (
+                <div className="relative z-50">
+                  <LanguageSelector 
+                    variant="dropdown" 
+                    showFlags={true}
+                    compact={false}
+                  />
+                </div>
+              )}
+              
+              {/* Menu Button */}
             <motion.button
               id="menu-toggle-button"
               whileHover={{ scale: 1.1 }}
@@ -221,6 +234,7 @@ function OptimizedNavbar() {
                 )}
               </AnimatePresence>
             </motion.button>
+            </div>
           </div>
         </div>
       </div>
