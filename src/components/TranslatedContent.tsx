@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
-import TranslatedText from './TranslatedText';
+import { ReactNode, useState, useEffect } from 'react';
+import useTranslation from '../hooks/useTranslation';
 
 interface TranslatedContentProps {
   children: ReactNode;
   className?: string;
   targetLanguage?: string;
   sourceLanguage?: string;
-  enableTranslation?: boolean;
+  dynamicContent?: boolean;
 }
 
 /**
@@ -18,10 +18,43 @@ export default function TranslatedContent({
   className = '',
   targetLanguage,
   sourceLanguage = 'en',
-  enableTranslation = true,
+  dynamicContent = false,
 }: TranslatedContentProps) {
-  // If translation is disabled or children is not a string, render directly
-  if (!enableTranslation || typeof children !== 'string') {
+  const [translatedText, setTranslatedText] = useState<string>('');
+  const { translate, currentLanguage } = useTranslation();
+
+  useEffect(() => {
+    const performTranslation = async () => {
+      // Only translate if children is a string and we have dynamic content enabled
+      if (typeof children === 'string' && dynamicContent) {
+        const effectiveTargetLanguage = targetLanguage || currentLanguage;
+        
+        // Skip translation if target is English
+        if (effectiveTargetLanguage === 'en') {
+          setTranslatedText(children);
+          return;
+        }
+
+        try {
+          const result = await translate(children, {
+            targetLanguage: effectiveTargetLanguage,
+            sourceLanguage
+          });
+          setTranslatedText(result);
+        } catch (error) {
+          console.warn('Translation failed:', error);
+          setTranslatedText(children); // Fallback to original
+        }
+      } else if (typeof children === 'string') {
+        setTranslatedText(children);
+      }
+    };
+
+    performTranslation();
+  }, [children, currentLanguage, targetLanguage, sourceLanguage, translate, dynamicContent]);
+
+  // If children is not a string, render directly
+  if (typeof children !== 'string') {
     return (
       <div className={className}>
         {children}
@@ -29,17 +62,11 @@ export default function TranslatedContent({
     );
   }
 
-  // Use TranslatedText for string content
+  // Render translated text
   return (
-    <TranslatedText
-      targetLanguage={targetLanguage}
-      sourceLanguage={sourceLanguage}
-      className={className}
-      fallbackToOriginal={true}
-      showLoadingIndicator={false}
-    >
-      {children}
-    </TranslatedText>
+    <span className={className}>
+      {translatedText || children}
+    </span>
   );
 }
 

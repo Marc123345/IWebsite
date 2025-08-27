@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './lib/i18n';
 import App from './App';
 import { AnimationController } from './components/AnimationController';
 import './index.css';
