@@ -15,6 +15,8 @@ import {
   Activity
 } from 'lucide-react';
 
+import TranslatedContent from '../../TranslatedContent';
+
 export default function MissionJourneyVisualization() {
   const [activeSection, setActiveSection] = useState<'community' | 'platform' | 'providers'>('platform');
   const [isHovering, setIsHovering] = useState(false);

@@ -390,7 +390,7 @@ export default function HomePage() {
               </motion.div>
 
               <GlassCard className="max-w-3xl mx-auto mb-4 md:mb-8" opacity={0.2} blur="lg" enhancedContrast={true}>
-                <TranslatedContent className="text-white text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+                <TranslatedContent className="text-white text-base sm:text-lg md:text-xl font-medium leading-relaxed" dynamicContent={true}>
                   Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection.
                 </TranslatedContent>
               </GlassCard>
@@ -410,7 +410,7 @@ export default function HomePage() {
                     withShimmer
                     className="shadow-xl w-full sm:w-auto"
                   >
-                    Get Therapy Solutions
+                    <TranslatedContent dynamicContent={true}>Get Therapy Solutions</TranslatedContent>
                   </Button>
                 </motion.div>
                 <motion.div
@@ -426,7 +426,7 @@ export default function HomePage() {
                     icon={<Shield className="w-5 h-5" />}
                     className="border-white/40 text-white hover:bg-white/10 shadow-xl w-full sm:w-auto"
                   >
-                    Partners
+                    <TranslatedContent dynamicContent={true}>Partners</TranslatedContent>
                   </Button>
                 </motion.div>
               </div>
@@ -447,6 +447,7 @@ export default function HomePage() {
                     />
                   </div>
                   <span className="text-xs font-light">Scroll</span>
+                  <span className="text-xs font-light"><TranslatedContent dynamicContent={true}>Scroll</TranslatedContent></span>
                 </div>
               </motion.div>
             </motion.div>
@@ -478,8 +479,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
             >
               <SectionHeading
-                title="How iLight Uses Data to Drive Better Outcomes"
-                description="We don't just collect data — we turn it into personalized care that works."
+                title={<TranslatedContent dynamicContent={true}>How iLight Uses Data to Drive Better Outcomes</TranslatedContent>}
+                description={<TranslatedContent dynamicContent={true}>We don't just collect data — we turn it into personalized care that works.</TranslatedContent>}
                 align="center"
                 withDivider
                 textColor="text-black"
@@ -528,8 +529,8 @@ export default function HomePage() {
               >
                 <div className="relative z-10">
                   <SectionHeading
-                    title="Join Our Mission"
-                    description="Be part of transforming personal wellness therapy solutions through innovation and compassion."
+                    title={<TranslatedContent dynamicContent={true}>Join Our Mission</TranslatedContent>}
+                    description={<TranslatedContent dynamicContent={true}>Be part of transforming personal wellness therapy solutions through innovation and compassion.</TranslatedContent>}
                     align="center"
                     withGradient
                     gradientFrom="from-white"
@@ -538,7 +539,9 @@ export default function HomePage() {
                   />
                   
                   <p className="text-xl text-white/90 mb-8 text-center">
+                    <TranslatedContent dynamicContent={true}>
                     HELP US, HELP YOU, HELP OTHERS and be part of the PRICELESS PURPOSE of enriching lives together through delivering the RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.
+                    </TranslatedContent>
                   </p>
                   
                   <div className="flex justify-center mt-6">
@@ -555,7 +558,7 @@ export default function HomePage() {
                         icon={<ArrowRight className="w-5 h-5" />}
                         className="mx-auto shadow-xl"
                       >
-                        Get Started
+                        <TranslatedContent dynamicContent={true}>Get Started</TranslatedContent>
                       </Button>
                     </motion.div>
                   </div>
@@ -584,7 +587,7 @@ export default function HomePage() {
                   <Shield className="w-5 h-5 md:w-6 md:h-6 text-ilight-600 flex-shrink-0" />
                   <div className="text-xs md:text-sm text-black">
                     <p>
-                      <strong>Platform Status:</strong> Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform's capabilities.
+                      <strong><TranslatedContent dynamicContent={true}>Platform Status:</TranslatedContent></strong> <TranslatedContent dynamicContent={true}>Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform's capabilities.</TranslatedContent>
                     </p>
                   </div>
                 </div>
