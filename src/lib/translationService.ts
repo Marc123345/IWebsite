@@ -71,9 +71,14 @@ class TranslationService {
           translatedText: cachedResult.translatedText,
           success: true
         };
+      */
       }
-
-      // Make request to our secure backend
+      // Return original text on any error
+      return text;
+      // This prevents API calls that would fail due to missing configuration
+      return text;
+      
+      /* Commented out API call until proper configuration is available
       const response = await fetch(this.API_ENDPOINT, {
         method: 'POST',
         headers: {
