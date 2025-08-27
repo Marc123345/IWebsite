@@ -35,8 +35,8 @@ class TranslationService {
   private readonly API_ENDPOINT: string;
 
   constructor() {
-    // Disable API endpoint for now since secrets aren't configured
-    this.API_ENDPOINT = '';
+    // Use frontend environment variable for API key
+    this.API_ENDPOINT = 'https://translation.googleapis.com/language/translate/v2';
     this.loadCacheFromStorage();
   }
 
@@ -74,17 +74,50 @@ class TranslationService {
         };
       }
       
-      // For now, use fallback translations since Edge Function secrets aren't configured
-      console.info('Using fallback translation - Edge Function not configured');
-      const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
+      // Make direct API call to Google Translate
+      const apiKey = import.meta.env.VITE_GOOGLE_TRANSLATION_API_KEY;
+      if (!apiKey) {
+        console.warn('Google Translate API key not found, using fallback');
+        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
+        return {
+          translatedText: fallbackText,
+          success: true
+        };
+      }
+
+      const response = await fetch(`${this.API_ENDPOINT}?key=${apiKey}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          q: options.text,
+          target: options.targetLanguage,
+          source: options.sourceLanguage || 'en',
+          format: 'text'
+        })
+      });
+
+      if (!response.ok) {
+        console.warn('Translation API failed, using fallback');
+        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
+        return {
+          translatedText: fallbackText,
+          success: true
+        };
+      }
+
+      const data = await response.json();
+      const translatedText = data.data.translations[0].translatedText;
       
-      // Cache the fallback translation
-      if (fallbackText !== options.text) {
-        this.cacheTranslation(cacheKey, fallbackText);
+      // Cache the translation
+      if (translatedText !== options.text) {
+        this.cacheTranslation(cacheKey, translatedText);
       }
       
       return {
-        translatedText: fallbackText,
+        translatedText: translatedText,
+        detectedSourceLanguage: data.data.translations[0].detectedSourceLanguage,
         success: true
       };
 
