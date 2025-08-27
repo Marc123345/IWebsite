@@ -15,8 +15,6 @@ import {
   Activity
 } from 'lucide-react';
 
-import TranslatedContent from '../../TranslatedContent';
-
 export default function MissionJourneyVisualization() {
   const [activeSection, setActiveSection] = useState<'community' | 'platform' | 'providers'>('platform');
   const [isHovering, setIsHovering] = useState(false);
@@ -42,7 +40,7 @@ export default function MissionJourneyVisualization() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            A Personalized Continuum of Care Empowered by Technology & Data
+            <TranslatedContent dynamicContent={true}>A Personalized Continuum of Care Empowered by Technology & Data</TranslatedContent>
           </motion.h4>
           
           <div className="h-0.5 bg-gradient-to-r from-ilight-500/30 via-ilight-600 to-ilight-500/30 w-full max-w-4xl mx-auto mb-6"></div>
@@ -56,7 +54,7 @@ export default function MissionJourneyVisualization() {
               className="flex items-center justify-center"
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black font-serif px-2 leading-tight">
-                THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME
+                <TranslatedContent dynamicContent={true}>THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME</TranslatedContent>
               </h2>
             </motion.div>
           </div>
@@ -319,7 +317,7 @@ export default function MissionJourneyVisualization() {
               }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              ILIGHT….the future of data driven, personalized, life care solutions.
+              <TranslatedContent dynamicContent={true}>ILIGHT….the future of data driven, personalized, life care solutions.</TranslatedContent>
             </motion.p>
           </motion.div>
         </div>
