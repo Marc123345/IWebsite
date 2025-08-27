@@ -9,7 +9,8 @@ interface TranslatedContentProps {
   enableTranslation?: boolean;
 }
 
-/**
+export { TranslatedContent };
+export default TranslatedContent;
  * Enhanced component that provides translation functionality
  * Can render children directly or translate text content
  */
