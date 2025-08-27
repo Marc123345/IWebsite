@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { useTranslation } from 'react-i18next';
 import { generateWebPageSchema, generateServiceSchema } from '../utils/seoUtils';
+import TranslatedContent from '../components/TranslatedContent';
 
 export default function PartnersPage() {
   const { t } = useTranslation();
