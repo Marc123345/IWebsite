@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
 import LanguageSelector from './LanguageSelector';
-import LanguageSelector from './LanguageSelector';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
