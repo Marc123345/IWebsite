@@ -478,13 +478,13 @@ export default function AboutPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">The iLight illuminators</h2>
               
               <GlassCard className="max-w-4xl mx-auto mb-8" opacity={0.1} blur="md" textShadow enhancedContrast={true}>
-                <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
+                <TranslatedContent as="p" className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                   The iLight illuminators is everyone who plays a part, large or small, in driving our collective Mission and Vision of Illuminating lives.
                 </TranslatedContent>
-                <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
+                <TranslatedContent as="p" className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                   From each member of the ILIGHT Community, to the Trusted Therapy Providers and those working tirelessly in their role to Illuminate Lives by providing THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.
                 </TranslatedContent>
-                <TranslatedContent className="text-2xl text-white font-semibold" dynamicContent={true}>
+                <TranslatedContent as="p" className="text-2xl text-white font-semibold" dynamicContent={true}>
                   We are all in this together.
                 </TranslatedContent>
               </GlassCard>
