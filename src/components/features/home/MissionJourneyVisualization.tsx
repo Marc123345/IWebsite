@@ -55,7 +55,7 @@ export default function MissionJourneyVisualization() {
               className="flex items-center justify-center"
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black font-serif px-2 leading-tight">
-                <TranslatedContent dynamicContent={true}>THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME</TranslatedContent>
+                <TranslatedContent dynamicContent={true}>ILIGHT….the future of data driven, personalized, life care solutions.</TranslatedContent>
               </h2>
             </motion.div>
           </div>
@@ -148,10 +148,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Users className="w-4 h-4" />, label: "Social Network" },
-                    { icon: <Building className="w-4 h-4" />, label: "Content / Education" },
-                    { icon: <Heart className="w-4 h-4" />, label: "Care Champion" },
-                    { icon: <Users className="w-4 h-4" />, label: "Family inclusion" }
+                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Social Network</TranslatedContent> },
+                    { icon: <Building className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Content / Education</TranslatedContent> },
+                    { icon: <Heart className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Care Champion</TranslatedContent> },
+                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Family inclusion</TranslatedContent> }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -197,10 +197,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Activity className="w-4 h-4" />, label: "Data Science" },
-                    { icon: <Brain className="w-4 h-4" />, label: "Machine Learning" },
-                    { icon: <Sparkles className="w-4 h-4" />, label: "Artificial Intelligence" },
-                    { icon: <Shield className="w-4 h-4" />, label: "Care Navigation" }
+                    { icon: <Activity className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Data Science</TranslatedContent> },
+                    { icon: <Brain className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Machine Learning</TranslatedContent> },
+                    { icon: <Sparkles className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Artificial Intelligence</TranslatedContent> },
+                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Care Navigation</TranslatedContent> }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -246,10 +246,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Heart className="w-4 h-4" />, label: "Therapy Providers" },
-                    { icon: <Shield className="w-4 h-4" />, label: "Solution Providers" },
-                    { icon: <Users className="w-4 h-4" />, label: "Enhanced Engagement" },
-                    { icon: <Shield className="w-4 h-4" />, label: "Quality Control" }
+                    { icon: <Heart className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Therapy Providers</TranslatedContent> },
+                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Solution Providers</TranslatedContent> },
+                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Enhanced Engagement</TranslatedContent> },
+                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Quality Control</TranslatedContent> }
                   ].map((item, index) => (
                     <motion.div
                       key={index}

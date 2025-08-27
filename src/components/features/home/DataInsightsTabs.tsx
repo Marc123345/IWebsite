@@ -21,7 +21,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
   const tabs = [
     {
       id: 'pattern-recognition',
-      title: 'Pattern Recognition',
+      title: <TranslatedContent dynamicContent={true}>Pattern Recognition</TranslatedContent>,
       icon: <Brain className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
@@ -38,7 +38,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
     },
     {
       id: 'personalized-insights',
-      title: 'Personalized Insights',
+      title: <TranslatedContent dynamicContent={true}>Personalized Insights</TranslatedContent>,
       icon: <Target className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
@@ -55,7 +55,7 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
     },
     {
       id: 'continuous-improvement',
-      title: 'Continuous Learning',
+      title: <TranslatedContent dynamicContent={true}>Continuous Learning</TranslatedContent>,
       icon: <Activity className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',

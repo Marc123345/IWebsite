@@ -194,6 +194,259 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   'Join our supportive community to normalize wellness discussions, access expert guidance, and connect with others who understand your journey.': {
     'he': 'הצטרף לקהילה התומכת שלנו כדי לנרמל דיונים על רווחה, לגשת להדרכה מומחית ולהתחבר לאחרים שמבינים את המסע שלך.',
   }
+  // Additional comprehensive translations
+  'Skip to main content': {
+    'he': 'דלג לתוכן הראשי',
+  },
+  'Scroll': {
+    'he': 'גלול',
+  },
+  'Get Therapy Solutions': {
+    'he': 'קבל פתרונות טיפול',
+  },
+  'Partners': {
+    'he': 'שותפים',
+  },
+  'A Personalized Continuum of Care Empowered by Technology & Data': {
+    'he': 'רצף טיפול מותאם אישית המופעל על ידי טכנולוגיה ונתונים',
+  },
+  'THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME': {
+    'he': 'הטיפול הנכון לאדם הנכון בזמן הנכון',
+  },
+  'ILIGHT….the future of data driven, personalized, life care solutions.': {
+    'he': 'ILIGHT....העתיד של פתרונות טיפול חיים מותאמים אישית מונעי נתונים.',
+  },
+  'COMMUNITY': {
+    'he': 'קהילה',
+  },
+  'Social Network': {
+    'he': 'רשת חברתית',
+  },
+  'Content / Education': {
+    'he': 'תוכן / חינוך',
+  },
+  'Care Champion': {
+    'he': 'אלוף טיפול',
+  },
+  'Family inclusion': {
+    'he': 'הכללת משפחה',
+  },
+  'iLIGHT PLATFORM': {
+    'he': 'פלטפורמת iLIGHT',
+  },
+  'Data Science': {
+    'he': 'מדעי נתונים',
+  },
+  'Machine Learning': {
+    'he': 'למידת מכונה',
+  },
+  'Artificial Intelligence': {
+    'he': 'בינה מלאכותית',
+  },
+  'Care Navigation': {
+    'he': 'ניווט טיפול',
+  },
+  'PROVIDERS': {
+    'he': 'ספקים',
+  },
+  'Therapy Providers': {
+    'he': 'ספקי טיפול',
+  },
+  'Solution Providers': {
+    'he': 'ספקי פתרונות',
+  },
+  'Enhanced Engagement': {
+    'he': 'מעורבות משופרת',
+  },
+  'Quality Control': {
+    'he': 'בקרת איכות',
+  },
+  'The Challenge of Self-Navigation': {
+    'he': 'האתגר של ניווט עצמי',
+  },
+  'Overwhelming Choices': {
+    'he': 'בחירות מכריעות',
+  },
+  'Difficulty in choosing the right therapy solutions options and resources.': {
+    'he': 'קושי בבחירת אפשרויות ומשאבים טיפוליים נכונים.',
+  },
+  'Inconsistent Progress': {
+    'he': 'התקדמות לא עקבית',
+  },
+  'Challenges in maintaining momentum and tracking improvement.': {
+    'he': 'אתגרים בשמירה על מומנטום ומעקב אחר שיפור.',
+  },
+  'Limited Guidance': {
+    'he': 'הדרכה מוגבלת',
+  },
+  'Lack of professional direction between sessions.': {
+    'he': 'חוסר הכוונה מקצועית בין המפגשים.',
+  },
+  'Isolation': {
+    'he': 'בידוד',
+  },
+  'Feeling alone in the personal wellness journey.': {
+    'he': 'מרגיש לבד במסע הרווחה האישית.',
+  },
+  'MyLight Solution': {
+    'he': 'פתרון MyLight',
+  },
+  'Personalized Guidance': {
+    'he': 'הדרכה מותאמת אישית',
+  },
+  'AI-powered recommendations based on your unique needs and progress.': {
+    'he': 'המלצות מונעות בינה מלאכותית המבוססות על הצרכים וההתקדמות הייחודיים שלך.',
+  },
+  'Progress Tracking': {
+    'he': 'מעקב התקדמות',
+  },
+  'Comprehensive monitoring of your personal wellness journey.': {
+    'he': 'ניטור מקיף של מסע הרווחה האישית שלך.',
+  },
+  'Professional Support': {
+    'he': 'תמיכה מקצועית',
+  },
+  'Seamless connection with professionals.': {
+    'he': 'חיבור חלק עם אנשי מקצוע.',
+  },
+  'Community Connection': {
+    'he': 'חיבור קהילתי',
+  },
+  'Access to peer support and shared experiences.': {
+    'he': 'גישה לתמיכת עמיתים וחוויות משותפות.',
+  },
+  'How iLight Uses Data to Drive Better Outcomes': {
+    'he': 'איך iLight משתמש בנתונים כדי להניע תוצאות טובות יותר',
+  },
+  'We don\'t just collect data — we turn it into personalized care that works.': {
+    'he': 'אנחנו לא רק אוספים נתונים - אנחנו הופכים אותם לטיפול מותאם אישית שעובד.',
+  },
+  'Pattern Recognition': {
+    'he': 'זיהוי דפוסים',
+  },
+  'Personalized Insights': {
+    'he': 'תובנות מותאמות אישית',
+  },
+  'Continuous Learning': {
+    'he': 'למידה מתמשכת',
+  },
+  'Identifying Emotional Patterns': {
+    'he': 'זיהוי דפוסים רגשיים',
+  },
+  'Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.': {
+    'he': 'הבינה המלאכותית שלנו מזהה דפוסים בהתנהגות המשתמש - מהמילים שהם מקלידים ועד לתדירות האינטראקציה שלהם - כדי לזהות אותות רווחה אישית בזמן אמת.',
+  },
+  'Natural language processing detects emotional states': {
+    'he': 'עיבוד שפה טבעית מזהה מצבים רגשיים',
+  },
+  'Behavioral pattern recognition across interactions': {
+    'he': 'זיהוי דפוסי התנהגות על פני אינטראקציות',
+  },
+  'Early identification of potential concerns': {
+    'he': 'זיהוי מוקדם של חששות פוטנציאליים',
+  },
+  'Personalized response based on historical data': {
+    'he': 'תגובה מותאמת אישית המבוססת על נתונים היסטוריים',
+  },
+  'Tailored Recommendations': {
+    'he': 'המלצות מותאמות',
+  },
+  'These insights guide tailored recommendations, match users to the right providers or peer support, and track improvements week by week.': {
+    'he': 'התובנות הללו מנחות המלצות מותאמות, מתאימות משתמשים לספקים הנכונים או תמיכת עמיתים, ועוקבות אחר שיפורים שבוע אחר שבוע.',
+  },
+  'Customized therapy solutions approaches': {
+    'he': 'גישות פתרונות טיפול מותאמות',
+  },
+  'Provider matching based on specific needs': {
+    'he': 'התאמת ספק המבוססת על צרכים ספציפיים',
+  },
+  'Resource recommendations aligned with goals': {
+    'he': 'המלצות משאבים המיושרות עם יעדים',
+  },
+  'Adaptive support intensity based on current state': {
+    'he': 'עוצמת תמיכה מסתגלת המבוססת על המצב הנוכחי',
+  },
+  'Evolving With You': {
+    'he': 'מתפתח איתך',
+  },
+  'Our system continuously learns from interactions, improving its ability to provide relevant support and measuring outcomes over time.': {
+    'he': 'המערכת שלנו לומדת ברציפות מאינטראקציות, משפרת את יכולתה לספק תמיכה רלוונטית ומודדת תוצאות לאורך זמן.',
+  },
+  'Feedback integration for improved accuracy': {
+    'he': 'שילוב משוב לדיוק משופר',
+  },
+  'Outcome measurement to validate effectiveness': {
+    'he': 'מדידת תוצאות לאימות יעילות',
+  },
+  'Adaptation to changing user needs': {
+    'he': 'הסתגלות לצרכי משתמש משתנים',
+  },
+  'Continuous model refinement and enhancement': {
+    'he': 'שיפור והשבחה מתמשכת של המודל',
+  },
+  'Platform Components': {
+    'he': 'רכיבי פלטפורמה',
+  },
+  'Our comprehensive platform integrates multiple components to deliver a care continuum, emotional well-being, and development of inner resilience, while being part of the purpose of helping yourself while helping others.': {
+    'he': 'הפלטפורמה המקיפה שלנו משלבת מרכיבים מרובים כדי לספק רצף טיפול, רווחה רגשית ופיתוח חוסן פנימי, תוך היותה חלק מהמטרה של לעזור לעצמך תוך כדי עזרה לאחרים.',
+  },
+  'Note: Some platform features are currently in development.': {
+    'he': 'הערה: חלק מתכונות הפלטפורמה נמצאות כעת בפיתוח.',
+  },
+  'iLight Community': {
+    'he': 'קהילת iLight',
+  },
+  'A place to share, heal, and grow. Connect with people who understand your journey and celebrate your progress. iLight\'s fundamental imperative is to not only provide a safe environment for personalized enrichment but importantly stimulate a purpose driven setting to Help Us, Help You, Help Others.': {
+    'he': 'מקום לשתף, לרפא ולצמוח. התחבר לאנשים שמבינים את המסע שלך וחוגגים את ההתקדמות שלך. הציווי הבסיסי של iLight הוא לא רק לספק סביבה בטוחה להעשרה אישית אלא חשוב לעורר סביבה מונעת מטרה לעזור לנו, לעזור לך, לעזור לאחרים.',
+  },
+  'iLight Network Partners': {
+    'he': 'שותפי רשת iLight',
+  },
+  'A network of vetted therapy providers and solutions who care about your unique needs and are committed to providing high-quality care and measurable outcomes.': {
+    'he': 'רשת של ספקי טיפול ופתרונות מאומתים שדואגים לצרכים הייחודיים שלך ומחויבים לספק טיפול איכותי ותוצאות מדידות.',
+  },
+  'MyLight': {
+    'he': 'MyLight',
+  },
+  'iLight+': {
+    'he': 'iLight+',
+  },
+  'Contact Us': {
+    'he': 'צור קשר',
+  },
+  'Stay Updated': {
+    'he': 'הישאר מעודכן',
+  },
+  'Your email address': {
+    'he': 'כתובת האימייל שלך',
+  },
+  'Submit': {
+    'he': 'שלח',
+  },
+  'Language': {
+    'he': 'שפה',
+  },
+  'Choose your preferred language for the website.': {
+    'he': 'בחר את השפה המועדפת עליך לאתר.',
+  },
+  'Privacy Policy': {
+    'he': 'מדיניות פרטיות',
+  },
+  'Terms of Service': {
+    'he': 'תנאי שירות',
+  },
+  'Cookie Policy': {
+    'he': 'מדיניות עוגיות',
+  },
+  'Platform Status:': {
+    'he': 'סטטוס פלטפורמה:',
+  },
+  'Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform\'s capabilities.': {
+    'he': 'חלק מהתכונות המוזכרות באתר זה, כולל אלמנטים מסוימים של גיימיפיקציה ותגמולים, נמצאים כעת בפיתוח ויושקו בהדרגה. אנו עובדים ברציפות לשפר ולהרחיב את יכולות הפלטפורמה שלנו.',
+  },
+  'HELP US, HELP YOU, HELP OTHERS and be part of the PRICELESS PURPOSE of enriching lives together through delivering the RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.': {
+    'he': 'עזור לנו, עזור לך, עזור לאחרים והיה חלק מהמטרה היקרה של העשרת חיים יחד באמצעות מתן הטיפול הנכון לאדם הנכון בזמן הנכון.',
+  }
 };
 
 export function getFallbackTranslation(text: string, targetLanguage: string): string {
