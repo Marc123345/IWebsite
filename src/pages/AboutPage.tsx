@@ -347,7 +347,7 @@ export default function AboutPage() {
                     <TranslatedContent dynamicContent={true}>
                       Transforming personal wellness therapy solutions through innovation, compassion, and accessibility.
                     </TranslatedContent>
-                  </p>
+                  </TranslatedContent>
                 </GlassCard>
                 
                 <motion.div
@@ -479,17 +479,17 @@ export default function AboutPage() {
               
               <GlassCard className="max-w-4xl mx-auto mb-8" opacity={0.1} blur="md" textShadow enhancedContrast={true}>
                 <p className="text-xl text-white leading-relaxed mb-4">
-                  <TranslatedContent>
+                  <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                     The iLight illuminators is everyone who plays a part, large or small, in driving our collective Mission and Vision of Illuminating lives.
                   </TranslatedContent>
                 </p>
-                <p className="text-xl text-white leading-relaxed mb-4">
-                  <TranslatedContent>
+                  </TranslatedContent>
+                  <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                     From each member of the ILIGHT Community, to the Trusted Therapy Providers and those working tirelessly in their role to Illuminate Lives by providing THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.
                   </TranslatedContent>
                 </p>
-                <p className="text-2xl text-white font-semibold">
-                  <TranslatedContent>
+                  </TranslatedContent>
+                  <TranslatedContent className="text-2xl text-white font-semibold" dynamicContent={true}>
                     We are all in this together.
                   </TranslatedContent>
                 </p>

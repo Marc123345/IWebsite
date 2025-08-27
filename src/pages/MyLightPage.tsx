@@ -106,7 +106,9 @@ export default function MyLightPage() {
                   transition={{ delay: 0.6 }}
                   className="text-xl md:text-2xl text-white text-shadow font-medium leading-relaxed"
                 >
-                  Data driven combination of therapy solutions just for YOU.
+                  <TranslatedContent dynamicContent={true}>
+                    Data driven combination of therapy solutions just for YOU.
+                  </TranslatedContent>
                 </motion.p>
               </GlassCard>
 

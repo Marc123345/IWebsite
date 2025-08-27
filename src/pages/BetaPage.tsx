@@ -68,10 +68,10 @@ export default function BetaPage() {
               </TextReveal>
               
               <GlassCard className="max-w-3xl mx-auto mb-12" opacity={0.1}>
-                <p className="text-2xl text-white/90 leading-relaxed">
+                <TranslatedContent className="text-2xl text-white/90 leading-relaxed" dynamicContent={true}>
                   Be among the first to experience our innovative personal wellness support platform 
                   and help shape the future of personal wellness care.
-                </p>
+                </TranslatedContent>
               </GlassCard>
               
               <Button

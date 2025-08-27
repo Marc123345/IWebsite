@@ -224,9 +224,9 @@ export default function PartnersPage() {
                             ease: "easeInOut"
                           }}
                         >
-                          RIGHT CARE
+                          <TranslatedContent dynamicContent={true}>RIGHT CARE</TranslatedContent>
                         </motion.span>{" "}
-                        TO THE{" "}
+                        <TranslatedContent dynamicContent={true}>TO THE</TranslatedContent>{" "}
                         <motion.span
                           className="inline-block"
                           animate={{
@@ -239,9 +239,9 @@ export default function PartnersPage() {
                             delay: 1
                           }}
                         >
-                          RIGHT PERSON
+                          <TranslatedContent dynamicContent={true}>RIGHT PERSON</TranslatedContent>
                         </motion.span>{" "}
-                        AT THE{" "}
+                        <TranslatedContent dynamicContent={true}>AT THE</TranslatedContent>{" "}
                         <motion.span
                           className="inline-block"
                           animate={{
@@ -254,7 +254,7 @@ export default function PartnersPage() {
                             delay: 2
                           }}
                         >
-                          RIGHT TIME
+                          <TranslatedContent dynamicContent={true}>RIGHT TIME</TranslatedContent>
                         </motion.span>
                         <motion.span
                           className="inline-block text-white"

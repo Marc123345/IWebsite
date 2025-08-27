@@ -179,13 +179,15 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow-md leading-tight">
-                  Comprehensive Personal Wellness Therapy Solutions
+                  <TranslatedContent dynamicContent={true}>
+                    Comprehensive Personal Wellness Therapy Solutions
+                  </TranslatedContent>
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-10 md:mb-12 leading-relaxed max-w-3xl mx-auto">
+                <TranslatedContent className="text-lg md:text-xl text-white/90 mb-10 md:mb-12 leading-relaxed max-w-3xl mx-auto" dynamicContent={true}>
                   Experience personalized care through our innovative blend of AI technology,
                   professional expertise, and community connection. Our holistic approach meets you
                   where you are on your wellness journey.
-                </p>
+                </TranslatedContent>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link
                     to="/contact"

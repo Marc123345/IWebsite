@@ -93,9 +93,9 @@ export default function PromisePage() {
                   enhancedContrast={true}
                   padding="md"
                 >
-                  <p className="text-xl text-white leading-relaxed text-shadow-lg">
+                  <TranslatedContent className="text-xl text-white leading-relaxed text-shadow-lg" dynamicContent={true}>
                     Our commitment to providing a safe, supportive, and effective platform for your personal wellness journey.
-                  </p>
+                  </TranslatedContent>
                 </GlassCard>
               </motion.div>
             </div>
