@@ -15,7 +15,7 @@ export default function useTranslation(): UseTranslationReturn {
   const { t, i18n } = useI18nextTranslation();
   
   const supportedLanguages = [
-    'en', 'es', 'fr', 'de', 'it', 'pt', 'he', 'ar', 'zh', 'ja'
+    'en', 'he'
   ];
 
   const translate = async (text: string, options?: { targetLanguage?: string; sourceLanguage?: string }): Promise<string> => {

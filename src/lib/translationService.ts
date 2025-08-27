@@ -127,8 +127,7 @@ class TranslationService {
     // Return commonly supported languages
     // In a real implementation, you might fetch this from Google's API
     return [
-      'en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'ko', 'zh',
-      'ar', 'hi', 'he', 'nl', 'sv', 'da', 'no', 'fi', 'pl', 'tr'
+      'en', 'he'
     ];
   }
 
