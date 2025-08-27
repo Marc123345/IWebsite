@@ -486,7 +486,6 @@ export default function AboutPage() {
                 <TranslatedContent className="text-2xl text-white font-semibold" dynamicContent={true}>
                 </TranslatedContent>
               </GlassCard>
-              </GlassCard>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
