@@ -38,10 +38,10 @@ Deno.serve(async (req) => {
     // Get the API key from environment variables
     const apiKey = Deno.env.get('GOOGLE_TRANSLATION_API_KEY')
     if (!apiKey) {
-      console.error('GOOGLE_TRANSLATION_API_KEY not found in environment variables. Available env vars:', Object.keys(Deno.env.toObject()))
+      console.error('GOOGLE_TRANSLATION_API_KEY not found in environment variables.')
       return new Response(
         JSON.stringify({ 
-          error: 'Translation service not configured. Please set GOOGLE_TRANSLATION_API_KEY in Supabase Edge Function secrets.',
+          error: 'Translation service not configured. Please set GOOGLE_TRANSLATION_API_KEY as a secret in your Supabase project dashboard under Edge Functions > translate-text > Settings > Secrets. Use the value: AIzaSyDmcHSfITgygEKQ-f9UCjTAR-9PRVyxlS8',
           success: false 
         }),
         { 
