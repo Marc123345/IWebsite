@@ -73,14 +73,6 @@ class TranslationService {
         };
       }
       
-      // Return original text on any error
-      return {
-        translatedText: options.text,
-        success: true
-      };
-      // This prevents API calls that would fail due to missing configuration
-      
-      /* Commented out API call until proper configuration is available
       const response = await fetch(this.API_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -106,7 +98,6 @@ class TranslationService {
       }
 
       return result;
-      */
 
     } catch (error) {
       console.warn('Translation API unavailable, using fallback:', error);
