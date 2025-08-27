@@ -1,8 +1,8 @@
 /**
- * Translation Service with Secure Token Management
+ * Frontend-Only Translation Service
  * 
- * This service handles translation requests through our secure backend
- * and implements proper token storage and management practices.
+ * This service provides translation functionality using only fallback translations
+ * since Google Translation API cannot be called directly from the browser due to CORS restrictions.
  */
 
 import { getFallbackTranslation } from './fallbackTranslations';
@@ -32,14 +32,40 @@ class TranslationService {
   private cache: TranslationCache = {};
   private readonly CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
   private readonly MAX_CACHE_SIZE = 1000;
-  private readonly USE_EDGE_FUNCTION = false; // Disable edge function for now
 
   constructor() {
     this.loadCacheFromStorage();
+    this.initializeAutoTranslation();
   }
 
   /**
-   * Translate text using our secure backend service
+   * Initialize automatic translation for Hebrew
+   */
+  private initializeAutoTranslation(): void {
+    const preferredLanguage = localStorage.getItem('preferred_language');
+    if (preferredLanguage === 'he') {
+      this.applyLanguageToDocument('he');
+    }
+  }
+
+  /**
+   * Apply language translations to the entire document
+   */
+  private async applyLanguageToDocument(language: string): Promise<void> {
+    if (language === 'en') return;
+
+    // Set document direction for RTL languages
+    if (language === 'he') {
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'he';
+    } else {
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = language;
+    }
+  }
+
+  /**
+   * Translate text using fallback translations only
    */
   async translateText(options: TranslationOptions): Promise<TranslationResult> {
     try {
@@ -47,15 +73,6 @@ class TranslationService {
       if (options.targetLanguage === 'en') {
         return {
           translatedText: options.text,
-          success: true
-        };
-      }
-
-      // Try fallback translation first for common phrases
-      const fallbackResult = getFallbackTranslation(options.text, options.targetLanguage);
-      if (fallbackResult !== options.text) {
-        return {
-          translatedText: fallbackResult,
           success: true
         };
       }
@@ -71,73 +88,26 @@ class TranslationService {
           success: true
         };
       }
+
+      // Use fallback translation
+      const fallbackResult = getFallbackTranslation(options.text, options.targetLanguage);
       
-      // Use Supabase Edge Function for translation
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-      
-      if (!supabaseUrl || !supabaseKey) {
-        console.warn('Supabase configuration not found, using fallback');
-        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
-        return {
-          translatedText: fallbackText,
-          success: true
-        };
+      // Cache the translation if it's different from original
+      if (fallbackResult !== options.text) {
+        this.cacheTranslation(cacheKey, fallbackResult);
       }
 
-      // Make call to Supabase Edge Function
-      const response = await fetch(`${supabaseUrl}/functions/v1/translate-text`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${supabaseKey}`,
-        },
-        body: JSON.stringify({
-          text: options.text,
-          targetLanguage: options.targetLanguage,
-          sourceLanguage: options.sourceLanguage || 'en'
-        })
-      });
-
-      if (!response.ok) {
-        console.warn('Translation API failed, using fallback');
-        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
-        return {
-          translatedText: fallbackText,
-          success: true
-        };
-      }
-
-      const data = await response.json();
-      
-      if (!data.success) {
-        console.warn('Translation service error, using fallback');
-        const fallbackText = getFallbackTranslation(options.text, options.targetLanguage);
-        return {
-          translatedText: fallbackText,
-          success: true
-        };
-      }
-      
-      const translatedText = data.translatedText;
-      
-      // Cache the translation
-      if (translatedText !== options.text) {
-        this.cacheTranslation(cacheKey, translatedText);
-      }
-      
       return {
-        translatedText: translatedText,
-        detectedSourceLanguage: data.detectedSourceLanguage,
+        translatedText: fallbackResult,
         success: true
       };
 
     } catch (error) {
-      console.warn('Translation API unavailable, using fallback:', error);
-      // Return fallback translation instead of throwing error
+      console.warn('Translation failed:', error);
       return {
-        translatedText: getFallbackTranslation(options.text, options.targetLanguage),
-        success: true
+        translatedText: options.text,
+        success: false,
+        error: error instanceof Error ? error.message : 'Translation failed'
       };
     }
   }
@@ -154,32 +124,22 @@ class TranslationService {
   }
 
   /**
-   * Get supported languages (cached for performance)
+   * Get supported languages
    */
   async getSupportedLanguages(): Promise<string[]> {
-    // Return commonly supported languages
-    // In a real implementation, you might fetch this from Google's API
-    return [
-      'en', 'he'
-    ];
+    return ['en', 'he'];
   }
 
   /**
-   * Detect language of given text
+   * Detect language of given text (simplified for frontend-only)
    */
   async detectLanguage(text: string): Promise<string | null> {
-    try {
-      // Use translation with auto-detect to get source language
-      const result = await this.translateText({
-        text,
-        targetLanguage: 'en' // Use English as target to detect source
-      });
-
-      return result.detectedSourceLanguage || null;
-    } catch (error) {
-      console.error('Language detection error:', error);
-      return null;
+    // Simple heuristic for Hebrew detection
+    const hebrewPattern = /[\u0590-\u05FF]/;
+    if (hebrewPattern.test(text)) {
+      return 'he';
     }
+    return 'en';
   }
 
   /**
@@ -199,7 +159,7 @@ class TranslationService {
     
     return {
       size: entries.length,
-      detectedSourceLanguage: detectedSourceLanguage,
+      oldestEntry: timestamps.length > 0 ? Math.min(...timestamps) : 0,
       newestEntry: timestamps.length > 0 ? Math.max(...timestamps) : 0
     };
   }
@@ -280,8 +240,8 @@ class TranslationService {
   }
 }
 
-// Create singleton instance
+// Create singleton instance for translation service
 export const translationService = new TranslationService();
 
-// Export types for use in components
+// Export types
 export type { TranslationOptions, TranslationResult };

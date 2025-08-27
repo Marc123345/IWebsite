@@ -191,6 +191,46 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   'Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way.': {
     'he': 'הבן לוויה האישי שלך לריפוי וחוסן—מציע הדרכה, עידוד והבנה בכל שלב בדרך.',
   },
+  // Additional missing translations
+  'The Challenge of Self-Navigation': {
+    'he': 'האתגר של ניווט עצמי',
+  },
+  'MyLight Solution': {
+    'he': 'פתרון MyLight',
+  },
+  'How iLight Uses Data to Drive Better Outcomes': {
+    'he': 'איך iLight משתמש בנתונים כדי להניע תוצאות טובות יותר',
+  },
+  'We don\'t just collect data — we turn it into personalized care that works.': {
+    'he': 'אנחנו לא רק אוספים נתונים - אנחנו הופכים אותם לטיפול מותאם אישית שעובד.',
+  },
+  'Identifying Emotional Patterns': {
+    'he': 'זיהוי דפוסים רגשיים',
+  },
+  'Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.': {
+    'he': 'הבינה המלאכותית שלנו מזהה דפוסים בהתנהגות המשתמש - מהמילים שהם מקלידים ועד לתדירות האינטראקציה שלהם - כדי לזהות אותות רווחה אישית בזמן אמת.',
+  },
+  'Natural language processing detects emotional states': {
+    'he': 'עיבוד שפה טבעית מזהה מצבים רגשיים',
+  },
+  'Behavioral pattern recognition across interactions': {
+    'he': 'זיהוי דפוסי התנהגות על פני אינטראקציות',
+  },
+  'Early identification of potential concerns': {
+    'he': 'זיהוי מוקדם של חששות פוטנציאליים',
+  },
+  'Personalized response based on historical data': {
+    'he': 'תגובה מותאמת אישית המבוססת על נתונים היסטוריים',
+  },
+  'A place to share, heal, and grow. Connect with people who understand your journey and celebrate your progress. iLight\'s fundamental imperative is to not only provide a safe environment for personalized enrichment but importantly stimulate a purpose driven setting to Help Us, Help You, Help Others.': {
+    'he': 'מקום לשתף, לרפא ולצמוח. התחבר לאנשים שמבינים את המסע שלך וחוגגים את ההתקדמות שלך. הציווי הבסיסי של iLight הוא לא רק לספק סביבה בטוחה להעשרה אישית אלא חשוב לעורר סביבה מונעת מטרה לעזור לנו, לעזור לך, לעזור לאחרים.',
+  },
+  'A network of vetted therapy providers and solutions who care about your unique needs and are committed to providing high-quality care and measurable outcomes.': {
+    'he': 'רשת של ספקי טיפול ופתרונות מאומתים שדואגים לצרכים הייחודיים שלך ומחויבים לספק טיפול איכותי ותוצאות מדידות.',
+  },
+  'Our premium platform aims to harness the power of data science, machine learning, and AI to deliver a personalized care support and continuum experience.': {
+    'he': 'הפלטפורמה הפרימיום שלנו שואפת לרתום את כוח מדעי הנתונים, למידת מכונה ובינה מלאכותית כדי לספק חוויית תמיכה וטיפול מותאמת אישית.',
+  },
   'Join our supportive community to normalize wellness discussions, access expert guidance, and connect with others who understand your journey.': {
     'he': 'הצטרף לקהילה התומכת שלנו כדי לנרמל דיונים על רווחה, לגשת להדרכה מומחית ולהתחבר לאחרים שמבינים את המסע שלך.',
   }

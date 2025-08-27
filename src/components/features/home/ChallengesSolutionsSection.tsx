@@ -8,7 +8,7 @@ import {
   Heart, 
   Activity
 } from 'lucide-react';
-import { TranslatedContent } from '../../TranslatedContent';
+import TranslatedContent from '../../TranslatedContent';
 
 export default function ChallengesSolutionsSection() {
   const challenges = [
