@@ -26,11 +26,6 @@ export default function TranslatedContent({
   const { translate, currentLanguage } = useTranslation();
   const { t, i18n } = useTranslation();
 
-  // Guard against undefined i18n
-  if (!i18n) {
-    return <Component>{children}</Component>;
-  }
-
   useEffect(() => {
     const performTranslation = async () => {
       // Only translate if children is a string and we have dynamic content enabled
