@@ -199,7 +199,7 @@ class TranslationService {
     
     return {
       size: entries.length,
-      oldestEntry: timestamps.length > 0 ? Math.min(...timestamps) : 0,
+      detectedSourceLanguage: detectedSourceLanguage,
       newestEntry: timestamps.length > 0 ? Math.max(...timestamps) : 0
     };
   }
