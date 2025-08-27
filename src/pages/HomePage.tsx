@@ -203,7 +203,7 @@ export default function HomePage() {
     },
     {
       title: "MyLight",
-      description: "Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way.",
+      description: <TranslatedContent dynamicContent={true}>Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way.</TranslatedContent>,
       image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746363805/backpack-adventure-hiking-traveler-mother-and-daug-2024-10-18-04-50-03-utc_1_fsj2as.jpg",
       link: "/mylight",
       isReversed: false

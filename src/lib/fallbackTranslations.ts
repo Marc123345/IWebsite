@@ -53,6 +53,84 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   'Join our network of therapy and solution providers': {
     'he': 'הצטרף לרשת ספקי הטיפול והפתרונות שלנו',
   },
+  'Our Passion': {
+    'he': 'התשוקה שלנו',
+  },
+  'Transforming personal wellness therapy solutions through innovation, compassion, and accessibility.': {
+    'he': 'שינוי פתרונות טיפול רווחה אישית באמצעות חדשנות, חמלה ונגישות.',
+  },
+  'Our Mission': {
+    'he': 'המשימה שלנו',
+  },
+  'The iLight illuminators': {
+    'he': 'המאירים של iLight',
+  },
+  'The iLight illuminators is everyone who plays a part, large or small, in driving our collective Mission and Vision of Illuminating lives.': {
+    'he': 'המאירים של iLight הם כל מי שלוקח חלק, גדול או קטן, בהנעת המשימה והחזון הקולקטיביים שלנו של הארת חיים.',
+  },
+  'From each member of the ILIGHT Community, to the Trusted Therapy Providers and those working tirelessly in their role to Illuminate Lives by providing THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.': {
+    'he': 'מכל חבר בקהילת ILIGHT, לספקי הטיפול המהימנים ואלה הפועלים ללא לאות בתפקידם להאיר חיים על ידי מתן הטיפול הנכון לאדם הנכון בזמן הנכון.',
+  },
+  'iLight Illuminators': {
+    'he': 'מאירי iLight',
+  },
+  'Some of the passionate team members committed to actively make a difference in delivering the Mission and Vision': {
+    'he': 'חלק מחברי הצוות הנלהבים המחויבים לעשות הבדל פעיל במימוש המשימה והחזון',
+  },
+  'Our Impact': {
+    'he': 'ההשפעה שלנו',
+  },
+  'How we\'re making a difference in personal wellness therapy solutions': {
+    'he': 'איך אנחנו עושים הבדל בפתרונות טיפול רווחה אישית',
+  },
+  'Innovative Therapy Solutions': {
+    'he': 'פתרונות טיפול חדשניים',
+  },
+  'We\'re pioneering new approaches to personal therapy solutions through technology, community, and compassionate care.': {
+    'he': 'אנחנו חלוצים בגישות חדשות לפתרונות טיפול אישי באמצעות טכנולוגיה, קהילה וטיפול חמלה.',
+  },
+  'Community Building': {
+    'he': 'בניית קהילה',
+  },
+  'Creating safe spaces for connection, understanding, and mutual therapy solutions among those facing similar challenges.': {
+    'he': 'יצירת מרחבים בטוחים לחיבור, הבנה ופתרונות טיפול הדדיים בין אלה המתמודדים עם אתגרים דומים.',
+  },
+  'Professional Network': {
+    'he': 'רשת מקצועית',
+  },
+  'Developing a network of dedicated professionals committed to compassionate care and innovative approaches.': {
+    'he': 'פיתוח רשת של אנשי מקצוע מסורים המחויבים לטיפול חמלה וגישות חדשניות.',
+  },
+  'Join Our Mission': {
+    'he': 'הצטרף למשימה שלנו',
+  },
+  'Be part of transforming personal wellness therapy solutions through innovation and compassion.': {
+    'he': 'היה חלק משינוי פתרונות טיפול רווחה אישית באמצעות חדשנות וחמלה.',
+  },
+  'Comprehensive Personal Wellness Therapy Solutions': {
+    'he': 'פתרונות טיפול רווחה אישית מקיפים',
+  },
+  'Experience personalized care through our innovative blend of AI technology, professional expertise, and community connection. Our holistic approach meets you where you are on your wellness journey.': {
+    'he': 'חווה טיפול מותאם אישית באמצעות השילוב החדשני שלנו של טכנולוגיית AI, מומחיות מקצועית וחיבור קהילתי. הגישה ההוליסטית שלנו פוגשת אותך במקום שבו אתה נמצא במסע הרווחה שלך.',
+  },
+  'Our Service Offerings': {
+    'he': 'הצעות השירות שלנו',
+  },
+  'Explore our comprehensive personal wellness services designed to support you at every step of your journey, providing the right care at the right time.': {
+    'he': 'גלה את שירותי הרווחה האישית המקיפים שלנו המיועדים לתמוך בך בכל שלב במסע שלך, ומספקים את הטיפול הנכון בזמן הנכון.',
+  },
+  'Platform Features': {
+    'he': 'תכונות הפלטפורמה',
+  },
+  'Our integrated platform provides all the tools and resources you need for your personal wellness journey, seamlessly connecting professional care, technology, and community support.': {
+    'he': 'הפלטפורמה המשולבת שלנו מספקת את כל הכלים והמשאבים שאתה צריך למסע הרווחה האישי שלך, מחברת בצורה חלקה בין טיפול מקצועי, טכנולוגיה ותמיכה קהילתית.',
+  },
+  'Start Your Journey Today': {
+    'he': 'התחל את המסע שלך היום',
+  },
+  'Take the first step towards better personal wellness with our comprehensive therapy solutions system. You don\'t have to walk this path alone.': {
+    'he': 'קח את הצעד הראשון לקראת רווחה אישית טובה יותר עם מערכת פתרונות הטיפול המקיפה שלנו. אתה לא צריך ללכת בדרך הזו לבד.',
+  },
   'iLIGHT is a mission driven organization aiming to spread the viral and purpose driven power, message and actions by "Lighting up the Lives" of people impacted by personal challenges.': {
     'he': 'iLIGHT הוא ארגון מונע משימה שמטרתו להפיץ את הכוח הויראלי והמונע מטרה, המסר והפעולות על ידי "הארת החיים" של אנשים המושפעים מאתגרים אישיים.',
   },
@@ -109,6 +187,9 @@ export const fallbackTranslations: Record<string, Record<string, string>> = {
   },
   'Learn about iLight\'s passion to transform personal wellness therapy solutions through innovative technology and compassionate care.': {
     'he': 'למד על התשוקה של iLight לשנות פתרונות טיפול רווחה אישית באמצעות טכנולוגיה חדשנית וטיפול חמלה.',
+  },
+  'Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way.': {
+    'he': 'הבן לוויה האישי שלך לריפוי וחוסן—מציע הדרכה, עידוד והבנה בכל שלב בדרך.',
   },
   'Join our supportive community to normalize wellness discussions, access expert guidance, and connect with others who understand your journey.': {
     'he': 'הצטרף לקהילה התומכת שלנו כדי לנרמל דיונים על רווחה, לגשת להדרכה מומחית ולהתחבר לאחרים שמבינים את המסע שלך.',

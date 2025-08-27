@@ -84,7 +84,7 @@ export default function PlatformComponentsSection({
                   
                   {/* Description with Responsive Typography */}
                   <div className="text-sm sm:text-base font-light lg:text-lg xl:leading-[32px]">
-                    <TranslatedContent className="text-black" dynamicContent={true}>{component.description}</TranslatedContent>
+                    <div className="text-black">{component.description}</div>
                   </div>
                   
                   {/* CTA Button with Responsive Spacing */}
