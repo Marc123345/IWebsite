@@ -119,9 +119,7 @@ export default function ILightPlusPage() {
                     transition={{ delay: 0.6 }}
                     className="text-lg sm:text-xl md:text-2xl text-white text-shadow-lg font-medium leading-relaxed"
                   >
-                    <TranslatedContent dynamicContent={true}>
-                      The iLIGHT+ platform combines various elements of iLIGHT, harnessing the power of data science, machine learning, and AI to deliver personalized care with measurable outcomes.
-                    </TranslatedContent>
+                    The iLIGHT+ platform combines various elements of iLIGHT, harnessing the power of data science, machine learning, and AI to deliver personalized care with measurable outcomes.
                   </motion.p>
                 </GlassCard>
                 

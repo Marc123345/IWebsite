@@ -201,7 +201,7 @@ export default function CommunityPage() {
 
             <div className="max-w-6xl mx-auto">
               {communityFeatures.map((feature, index) => (
-                <div className="mb-20" key={feature.title}>
+                <div className="mb-20\" key={feature.title}>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

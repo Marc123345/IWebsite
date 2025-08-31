@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import TranslatedContent from './TranslatedContent';
 
 export default function SkipLink() {
   return (
@@ -12,7 +11,7 @@ export default function SkipLink() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <TranslatedContent dynamicContent={true}>Skip to main content</TranslatedContent>
+      Skip to main content
     </motion.a>
   );
 }

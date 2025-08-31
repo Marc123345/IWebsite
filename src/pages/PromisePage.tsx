@@ -17,7 +17,6 @@ import {
   AnimatedBackground
 } from '../components/patterns';
 import PromiseTabs from '../components/PromiseTabs';
-import TranslatedContent from '../components/TranslatedContent';
 
 export default function PromisePage() {
   return (
@@ -94,9 +93,9 @@ export default function PromisePage() {
                   enhancedContrast={true}
                   padding="md"
                 >
-                  <TranslatedContent className="text-xl text-white leading-relaxed text-shadow-lg" dynamicContent={true}>
+                  <p className="text-xl text-white leading-relaxed text-shadow-lg">
                     Our commitment to providing a safe, supportive, and effective platform for your personal wellness journey.
-                  </TranslatedContent>
+                  </p>
                 </GlassCard>
               </motion.div>
             </div>

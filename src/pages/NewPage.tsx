@@ -52,11 +52,11 @@ export default function NewPage() {
                 animate={{ opacity: 1, y: 0 }}
               >
                 <h1 className="text-white mb-6">
-                  <TranslatedContent dynamicContent={true}>New Page Title</TranslatedContent>
+                  New Page Title
                 </h1>
-                <TranslatedContent className="text-xl text-white mb-12" dynamicContent={true}>
+                <p className="text-xl text-white mb-12">
                   This is a description for the new page. It provides information about the content and purpose of this page.
-                </TranslatedContent>
+                </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link
                     to="/contact"
