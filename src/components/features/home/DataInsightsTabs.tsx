@@ -9,6 +9,8 @@ import {
   Zap
 } from 'lucide-react';
 
+import TranslatedContent from '../../TranslatedContent';
+
 interface DataInsightsTabsProps {
   className?: string;
 }
@@ -19,52 +21,52 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
   const tabs = [
     {
       id: 'pattern-recognition',
-      title: 'Pattern Recognition',
+      title: <TranslatedContent dynamicContent={true}>Pattern Recognition</TranslatedContent>,
       icon: <Brain className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
-        title: 'Identifying Emotional Patterns',
-        description: 'Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.',
+        title: <TranslatedContent dynamicContent={true}>Identifying Emotional Patterns</TranslatedContent>,
+        description: <TranslatedContent dynamicContent={true}>Our AI identifies patterns in user behavior — from the words they type to their interaction frequency — to detect personal wellness signals in real time.</TranslatedContent>,
         points: [
-          'Natural language processing detects emotional states',
-          'Behavioral pattern recognition across interactions',
-          'Early identification of potential concerns',
-          'Personalized response based on historical data'
+          <TranslatedContent dynamicContent={true}>Natural language processing detects emotional states</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Behavioral pattern recognition across interactions</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Early identification of potential concerns</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Personalized response based on historical data</TranslatedContent>
         ]
       }
     },
     {
       id: 'personalized-insights',
-      title: 'Personalized Insights',
+      title: <TranslatedContent dynamicContent={true}>Personalized Insights</TranslatedContent>,
       icon: <Target className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
-        title: 'Tailored Recommendations',
-        description: 'These insights guide tailored recommendations, match users to the right providers or peer support, and track improvements week by week.',
+        title: <TranslatedContent dynamicContent={true}>Tailored Recommendations</TranslatedContent>,
+        description: <TranslatedContent dynamicContent={true}>These insights guide tailored recommendations, match users to the right providers or peer support, and track improvements week by week.</TranslatedContent>,
         points: [
-          'Customized therapy solutions approaches',
-          'Provider matching based on specific needs',
-          'Resource recommendations aligned with goals',
-          'Adaptive support intensity based on current state'
+          <TranslatedContent dynamicContent={true}>Customized therapy solutions approaches</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Provider matching based on specific needs</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Resource recommendations aligned with goals</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Adaptive support intensity based on current state</TranslatedContent>
         ]
       }
     },
     {
       id: 'continuous-improvement',
-      title: 'Continuous Learning',
+      title: <TranslatedContent dynamicContent={true}>Continuous Learning</TranslatedContent>,
       icon: <Activity className="w-6 h-6" />,
       color: 'bg-ilight-500 text-white border-ilight-500',
       inactiveColor: 'bg-white text-ilight-500/70 border-gray-200',
       content: {
-        title: 'Evolving With You',
-        description: 'Our system continuously learns from interactions, improving its ability to provide relevant support and measuring outcomes over time.',
+        title: <TranslatedContent dynamicContent={true}>Evolving With You</TranslatedContent>,
+        description: <TranslatedContent dynamicContent={true}>Our system continuously learns from interactions, improving its ability to provide relevant support and measuring outcomes over time.</TranslatedContent>,
         points: [
-          'Feedback integration for improved accuracy',
-          'Outcome measurement to validate effectiveness',
-          'Adaptation to changing user needs',
-          'Continuous model refinement and enhancement'
+          <TranslatedContent dynamicContent={true}>Feedback integration for improved accuracy</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Outcome measurement to validate effectiveness</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Adaptation to changing user needs</TranslatedContent>,
+          <TranslatedContent dynamicContent={true}>Continuous model refinement and enhancement</TranslatedContent>
         ]
       }
     }

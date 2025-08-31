@@ -244,8 +244,10 @@ export default function AITechnologyPage() {
                   transition={{ delay: 0.6 }}
                   className="text-xl md:text-2xl text-white text-shadow font-medium leading-relaxed"
                 >
-                  Experience our cutting-edge AI technology that provides personalized support
-                  and insights 24/7, adapting to your unique needs.
+                  <TranslatedContent dynamicContent={true}>
+                    Experience our cutting-edge AI technology that provides personalized support
+                    and insights 24/7, adapting to your unique needs.
+                  </TranslatedContent>
                 </motion.p>
               </GlassCard>
 

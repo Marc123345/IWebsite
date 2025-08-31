@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
+import LanguageSelector from './LanguageSelector';
+import TranslatedContent from './TranslatedContent';
+import useTranslation from '../hooks/useTranslation';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -17,14 +21,16 @@ export default function Footer() {
                 <Logo variant="light" size="lg" />
               </motion.div>
             </div>
-            <p className="mt-4 text-white/90 leading-relaxed">
+            <TranslatedContent className="mt-4 text-white/90 leading-relaxed" dynamicContent={true}>
               iLIGHT is a mission driven organization aiming to spread the viral and purpose driven power, message and actions by "Lighting up the Lives" of people impacted by personal challenges.
-            </p>
+            </TranslatedContent>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Contact Us</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">
+              <TranslatedContent dynamicContent={true}>Contact Us</TranslatedContent>
+            </h3>
             <ul className="space-y-5">
               <li className="flex items-center space-x-4 group">
                 <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -49,15 +55,17 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6">Stay Updated</h3>
-            <p className="text-white/90 mb-6">
+            <h3 className="text-xl font-semibold text-white mb-6">
+              <TranslatedContent dynamicContent={true}>Stay Updated</TranslatedContent>
+            </h3>
+            <TranslatedContent className="text-white/90 mb-6" dynamicContent={true}>
               Subscribe to our newsletter for the latest updates as part of the ILIGHT Community.
-            </p>
+            </TranslatedContent>
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div className="relative">
                 <input
                   type="email"
-                  placeholder="Your email address"
+                  placeholder={t('Your email address')}
                   aria-label="Email address for newsletter"
                   className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg 
                     text-white placeholder-white/60 focus:outline-none focus:ring-2 
@@ -83,9 +91,24 @@ export default function Footer() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Submit
+                <TranslatedContent dynamicContent={true}>Submit</TranslatedContent>
               </motion.button>
             </form>
+          </div>
+
+          {/* Language Selector */}
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-6">
+              <TranslatedContent dynamicContent={true}>Language</TranslatedContent>
+            </h3>
+            <TranslatedContent className="text-white/90 mb-6" dynamicContent={true}>
+              Choose your preferred language for the website.
+            </TranslatedContent>
+            <LanguageSelector 
+              variant="dropdown" 
+              className="w-full"
+              showFlags={true}
+            />
           </div>
         </div>
 
@@ -96,13 +119,19 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8">
               <Link to="/privacy" className="text-white/80 hover:text-white text-sm transition-colors">
+                <TranslatedContent dynamicContent={true}>
                 Privacy Policy
+                </TranslatedContent>
               </Link>
               <Link to="/terms" className="text-white/80 hover:text-white text-sm transition-colors">
+                <TranslatedContent dynamicContent={true}>
                 Terms of Service
+                </TranslatedContent>
               </Link>
               <Link to="/cookies" className="text-white/80 hover:text-white text-sm transition-colors">
+                <TranslatedContent dynamicContent={true}>
                 Cookie Policy
+                </TranslatedContent>
               </Link>
             </div>
           </div>

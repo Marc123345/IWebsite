@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import TranslatedContent from '../../TranslatedContent';
 
 interface PlatformComponent {
   title: string;
@@ -32,10 +33,10 @@ export default function PlatformComponentsSection({
           viewport={{ once: true }}
         >
           <div className="mb-12 text-center mx-auto">
-            <h2 className="font-bold font-serif mb-4 text-3xl md:text-4xl letter-spacing-[-1px] text-gray-800 leading-tight">{title}</h2>
+            <h2 className="font-bold font-serif mb-4 text-3xl md:text-4xl letter-spacing-[-1px] text-gray-800 leading-tight"><TranslatedContent dynamicContent={true}>{title}</TranslatedContent></h2>
             <div className="h-1 bg-gradient-to-r from-ilight-700 to-ilight-700 rounded-full w-20 mb-6 mx-auto"></div>
-            <p className="text-ilight-700 max-w-3xl text-lg md:text-xl mx-auto">{description}</p>
-            {note && <div className="mt-4 text-sm text-ilight-600">{note}</div>}
+            <p className="text-ilight-700 max-w-3xl text-lg md:text-xl mx-auto"><TranslatedContent dynamicContent={true}>{description}</TranslatedContent></p>
+            {note && <div className="mt-4 text-sm text-ilight-600"><TranslatedContent dynamicContent={true}>{note}</TranslatedContent></div>}
           </div>
         </motion.div>
       </div>
@@ -79,11 +80,11 @@ export default function PlatformComponentsSection({
                   `}
                 >
                   {/* Title with Responsive Typography - Using font-serif for consistency */}
-                  <h3 className="pb-2 font-serif text-2xl sm:text-[28px] md:text-[32px] font-light leading-tight sm:leading-[40px] md:leading-[48px] text-ilight-600 md:pb-4 lg:pb-6 xl:text-[48px]">{component.title}</h3>
+                  <h3 className="pb-2 font-serif text-2xl sm:text-[28px] md:text-[32px] font-light leading-tight sm:leading-[40px] md:leading-[48px] text-ilight-600 md:pb-4 lg:pb-6 xl:text-[48px]"><TranslatedContent dynamicContent={true}>{component.title}</TranslatedContent></h3>
                   
                   {/* Description with Responsive Typography */}
                   <div className="text-sm sm:text-base font-light lg:text-lg xl:leading-[32px]">
-                    <p className="text-black">{component.description}</p>
+                    <div className="text-black">{component.description}</div>
                   </div>
                   
                   {/* CTA Button with Responsive Spacing */}
@@ -92,7 +93,7 @@ export default function PlatformComponentsSection({
                       to={component.link}
                       className="px-4 sm:px-5 py-2 sm:py-[10px] text-sm sm:text-base flex justify-center items-center group space-x-2 sm:space-x-3 rounded-full transition duration-300 ease-in-out transform border border-ilight-600 text-white bg-ilight-600 hover:bg-transparent hover:text-ilight-700"
                     >
-                      <span>Learn More</span>
+                      <TranslatedContent dynamicContent={true}>Learn More</TranslatedContent>
                       <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 transform group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>

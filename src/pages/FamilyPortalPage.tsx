@@ -52,13 +52,13 @@ export default function FamilyPortalPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-white text-shadow-lg mb-6 text-5xl md:text-6xl font-bold">
-                  Stay Connected and Informed
+                  <TranslatedContent dynamicContent={true}>Stay Connected and Informed</TranslatedContent>
                 </h1>
                 
                 <GlassCard className="max-w-3xl mx-auto mb-12" opacity={0.2} blur="md" textShadow>
-                  <p className="text-xl text-white text-center">
+                  <TranslatedContent className="text-xl text-white text-center" dynamicContent={true}>
                     Break free from isolation and join a supportive community where wellness discussions are normalized and valued.
-                  </p>
+                  </TranslatedContent>
                 </GlassCard>
                 
                 <Button

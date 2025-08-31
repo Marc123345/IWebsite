@@ -21,6 +21,7 @@ import {
   AnimatedBackground
 } from '../components/patterns';
 import FloatingCard from '../components/FloatingCard';
+import TranslatedContent from '../components/TranslatedContent';
 
 export default function IlluminationPage() {
   const [selectedInitiative, setSelectedInitiative] = useState<string | null>(null);
@@ -104,7 +105,9 @@ export default function IlluminationPage() {
                   transition={{ delay: 0.6 }}
                   className="text-xl md:text-2xl text-white text-shadow font-medium leading-relaxed"
                 >
-                  Join us in lighting up lives through purpose-driven community engagement, direct support, and sharing acts of kindness.
+                  <TranslatedContent dynamicContent={true}>
+                    Join us in lighting up lives through purpose-driven community engagement, direct support, and sharing acts of kindness.
+                  </TranslatedContent>
                 </motion.p>
               </GlassCard>
             </div>

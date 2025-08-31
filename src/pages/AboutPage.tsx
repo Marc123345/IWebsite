@@ -478,15 +478,14 @@ export default function AboutPage() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-serif">The iLight illuminators</h2>
               
               <GlassCard className="max-w-4xl mx-auto mb-8" opacity={0.1} blur="md" textShadow enhancedContrast={true}>
-                <p className="text-xl text-white leading-relaxed mb-4">
+                <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                   The iLight illuminators is everyone who plays a part, large or small, in driving our collective Mission and Vision of Illuminating lives.
-                </p>
-                <p className="text-xl text-white leading-relaxed mb-4">
+                </TranslatedContent>
+                <TranslatedContent className="text-xl text-white leading-relaxed mb-4" dynamicContent={true}>
                   From each member of the ILIGHT Community, to the Trusted Therapy Providers and those working tirelessly in their role to Illuminate Lives by providing THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME.
-                </p>
-                <p className="text-2xl text-white font-semibold">
-                  We are all in this together.
-                </p>
+                </TranslatedContent>
+                <TranslatedContent className="text-2xl text-white font-semibold" dynamicContent={true}>
+                </TranslatedContent>
               </GlassCard>
               
               <motion.div
@@ -758,7 +757,7 @@ export default function AboutPage() {
                       <h3 className="pb-2 font-serif text-[32px] font-light leading-[48px] text-ilight-600 md:pb-6 md:text-5xl xl:text-[60px]">{area.title}</h3>
                       <div className="text-base font-light lg:text-lg xl:leading-[32px]">
                         <p className="text-black">
-                          <TranslatedContent dynamicContent={true}>{area.description}</TranslatedContent>
+                          <TranslatedContent>{area.description}</TranslatedContent>
                         </p>
                       </div>
                       <div className="flex gap-5 pt-6">
