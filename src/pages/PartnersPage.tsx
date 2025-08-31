@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { useTranslation } from 'react-i18next';
 import { generateWebPageSchema, generateServiceSchema } from '../utils/seoUtils';
-import TranslatedContent from '../components/TranslatedContent';
 
 export default function PartnersPage() {
   const { t } = useTranslation();
@@ -225,9 +224,9 @@ export default function PartnersPage() {
                             ease: "easeInOut"
                           }}
                         >
-                          <TranslatedContent dynamicContent={true}>RIGHT CARE</TranslatedContent>
+                          RIGHT CARE
                         </motion.span>{" "}
-                        <TranslatedContent dynamicContent={true}>TO THE</TranslatedContent>{" "}
+                        TO THE{" "}
                         <motion.span
                           className="inline-block"
                           animate={{
@@ -240,9 +239,9 @@ export default function PartnersPage() {
                             delay: 1
                           }}
                         >
-                          <TranslatedContent dynamicContent={true}>RIGHT PERSON</TranslatedContent>
+                          RIGHT PERSON
                         </motion.span>{" "}
-                        <TranslatedContent dynamicContent={true}>AT THE</TranslatedContent>{" "}
+                        AT THE{" "}
                         <motion.span
                           className="inline-block"
                           animate={{
@@ -255,7 +254,7 @@ export default function PartnersPage() {
                             delay: 2
                           }}
                         >
-                          <TranslatedContent dynamicContent={true}>RIGHT TIME</TranslatedContent>
+                          RIGHT TIME
                         </motion.span>
                         <motion.span
                           className="inline-block text-white"

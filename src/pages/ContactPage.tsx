@@ -16,7 +16,6 @@ import Flex from '../components/Flex';
 import SectionHeading from '../components/SectionHeading';
 import Card from '../components/Card';
 import Button from '../components/Button';
-import TranslatedContent from '../components/TranslatedContent';
 import { 
   GlassCard, 
   ParallaxEffect, 
@@ -304,9 +303,9 @@ export default function ContactPage() {
                       userType === 'careseeker' ? 'text-white' : 'text-ilight-500'
                     }`} />
                     <h3 className="text-lg font-semibold mb-2">Looking for Support</h3>
-                    <TranslatedContent className={userType === 'careseeker' ? 'text-white/90' : 'text-ilight-600'} dynamicContent={true}>
+                    <p className={userType === 'careseeker' ? 'text-white/90' : 'text-ilight-600'}>
                       Get personalized wellness support and guidance
-                    </TranslatedContent>
+                    </p>
                   </motion.button>
 
                   <motion.button
@@ -328,9 +327,9 @@ export default function ContactPage() {
                       userType === 'caregiver' ? 'text-white' : 'text-ilight-500'
                     }`} />
                     <h3 className="text-lg font-semibold mb-2">Join as a Provider</h3>
-                    <TranslatedContent className={userType === 'caregiver' ? 'text-white/90' : 'text-ilight-600'} dynamicContent={true}>
+                    <p className={userType === 'caregiver' ? 'text-white/90' : 'text-ilight-600'}>
                       Join our network of therapy and solution providers
-                    </TranslatedContent>
+                    </p>
                   </motion.button>
                 </Grid>
               </div>

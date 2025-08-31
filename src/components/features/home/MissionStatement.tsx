@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import TranslatedContent from '../../TranslatedContent';
 
 export default function MissionStatement() {
   return (
@@ -48,9 +47,9 @@ export default function MissionStatement() {
               {/* Left column - Tagline */}
               <div className="flex flex-col justify-center md:w-1/2">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-white/20">
-                  <TranslatedContent className="text-lg sm:text-xl md:text-2xl text-white font-serif font-semibold leading-relaxed mb-4" dynamicContent={true}>
+                  <p className="text-lg sm:text-xl md:text-2xl text-white font-serif font-semibold leading-relaxed mb-4">
                     iLIGHT is a mission-driven organization dedicated to "Illuminating the Lives" of people impacted by personal challenges.
-                  </TranslatedContent>
+                  </p>
                   
                   <div className="text-center mt-4 md:mt-6">
                     <motion.p
@@ -60,11 +59,9 @@ export default function MissionStatement() {
                       }}
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                     >
-                      <TranslatedContent dynamicContent={true}>
-                        HOW MANY LIVES<br />
-                        DID YOU ILLUMINATE<br />
-                        TODAY?
-                      </TranslatedContent>
+                      HOW MANY LIVES<br />
+                      DID YOU ILLUMINATE<br />
+                      TODAY?
                     </motion.p>
                   </div>
                 </div>
@@ -72,17 +69,17 @@ export default function MissionStatement() {
               
               {/* Right column - Mission details */}
               <div className="space-y-4 md:w-1/2">
-                <TranslatedContent className="text-base sm:text-lg text-white/90 leading-relaxed" dynamicContent={true}>
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed">
                   Our comprehensive platform integrates multiple components to deliver a care continuum, emotional well-being, and development of inner resilience.
-                </TranslatedContent>
+                </p>
                 
-                <TranslatedContent className="text-base sm:text-lg text-white/90 leading-relaxed" dynamicContent={true}>
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed">
                   We combine purpose-driven community engagement, peer support, and innovative data-driven technology for holistic support.
-                </TranslatedContent>
+                </p>
                 
-                <TranslatedContent className="text-base sm:text-lg text-white/90 leading-relaxed" dynamicContent={true}>
+                <p className="text-base sm:text-lg text-white/90 leading-relaxed">
                   iLIGHT's fundamental imperative is to provide a safe environment for personalized enrichment while stimulating a purpose-driven setting to Help Us, Help You, Help Others.
-                </TranslatedContent>
+                </p>
               </div>
             </div>
           </div>

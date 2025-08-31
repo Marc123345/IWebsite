@@ -8,31 +8,31 @@ import {
   Heart, 
   Activity
 } from 'lucide-react';
-import TranslatedContent from '../../TranslatedContent';
+import { TranslatedContent } from '../../TranslatedContent';
 
 export default function ChallengesSolutionsSection() {
   const challenges = [
     {
-      title: <TranslatedContent dynamicContent={true}>Overwhelming Choices</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Difficulty in choosing the right therapy solutions options and resources.</TranslatedContent>,
+      title: "Overwhelming Choices",
+      description: "Difficulty in choosing the right therapy solutions options and resources.",
       icon: <Shield className="w-5 h-5" />,
       color: "bg-red-100 text-red-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Inconsistent Progress</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Challenges in maintaining momentum and tracking improvement.</TranslatedContent>,
+      title: "Inconsistent Progress",
+      description: "Challenges in maintaining momentum and tracking improvement.",
       icon: <Activity className="w-5 h-5" />,
       color: "bg-red-100 text-red-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Limited Guidance</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Lack of professional direction between sessions.</TranslatedContent>,
+      title: "Limited Guidance",
+      description: "Lack of professional direction between sessions.",
       icon: <Brain className="w-5 h-5" />,
       color: "bg-red-100 text-red-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Isolation</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Feeling alone in the personal wellness journey.</TranslatedContent>,
+      title: "Isolation",
+      description: "Feeling alone in the personal wellness journey.",
       icon: <Users className="w-5 h-5" />,
       color: "bg-red-100 text-red-600"
     }
@@ -40,26 +40,26 @@ export default function ChallengesSolutionsSection() {
 
   const solutions = [
     {
-      title: <TranslatedContent dynamicContent={true}>Personalized Guidance</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>AI-powered recommendations based on your unique needs and progress.</TranslatedContent>,
+      title: "Personalized Guidance",
+      description: "AI-powered recommendations based on your unique needs and progress.",
       icon: <Brain className="w-5 h-5" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Progress Tracking</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Comprehensive monitoring of your personal wellness journey.</TranslatedContent>,
+      title: "Progress Tracking",
+      description: "Comprehensive monitoring of your personal wellness journey.",
       icon: <Target className="w-5 h-5" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Professional Support</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Seamless connection with professionals.</TranslatedContent>,
+      title: "Professional Support",
+      description: "Seamless connection with professionals.",
       icon: <Heart className="w-5 h-5" />,
       color: "bg-green-100 text-green-600"
     },
     {
-      title: <TranslatedContent dynamicContent={true}>Community Connection</TranslatedContent>,
-      description: <TranslatedContent dynamicContent={true}>Access to peer support and shared experiences.</TranslatedContent>,
+      title: "Community Connection",
+      description: "Access to peer support and shared experiences.",
       icon: <Users className="w-5 h-5" />,
       color: "bg-green-100 text-green-600"
     }
@@ -91,7 +91,7 @@ export default function ChallengesSolutionsSection() {
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 overflow-hidden">
               {/* Card Header */}
               <div className="bg-gradient-to-r from-red-500 to-red-600 -mx-8 -mt-8 px-8 py-4 mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-white"><TranslatedContent dynamicContent={true}>The Challenge of Self-Navigation</TranslatedContent></h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">The Challenge of Self-Navigation</h3>
               </div>
               
               {/* Card Content */}
@@ -111,7 +111,7 @@ export default function ChallengesSolutionsSection() {
                     <div>
                       <h4 className="text-lg font-semibold mb-1 text-gray-800">{challenge.title}</h4>
                       <p className="text-gray-600">
-                        {challenge.description}
+                        <TranslatedContent dynamicContent={true}>{challenge.description}</TranslatedContent>
                       </p>
                     </div>
                   </motion.div>
@@ -144,7 +144,7 @@ export default function ChallengesSolutionsSection() {
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 overflow-hidden">
               {/* Card Header */}
               <div className="bg-gradient-to-r from-green-500 to-green-600 -mx-8 -mt-8 px-8 py-4 mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-white"><TranslatedContent dynamicContent={true}>MyLight Solution</TranslatedContent></h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">MyLight Solution</h3>
               </div>
               
               {/* Card Content */}
@@ -164,7 +164,7 @@ export default function ChallengesSolutionsSection() {
                     <div>
                       <h4 className="text-lg font-semibold mb-1 text-gray-800">{solution.title}</h4>
                       <p className="text-gray-600">
-                        {solution.description}
+                        <TranslatedContent dynamicContent={true}>{solution.description}</TranslatedContent>
                       </p>
                     </div>
                   </motion.div>

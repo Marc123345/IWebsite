@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import TranslatedContent from '../../TranslatedContent';
 import { 
   Wind, 
   Brain, 
@@ -41,7 +40,7 @@ export default function MissionJourneyVisualization() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <TranslatedContent dynamicContent={true}>A Personalized Continuum of Care Empowered by Technology & Data</TranslatedContent>
+            A Personalized Continuum of Care Empowered by Technology & Data
           </motion.h4>
           
           <div className="h-0.5 bg-gradient-to-r from-ilight-500/30 via-ilight-600 to-ilight-500/30 w-full max-w-4xl mx-auto mb-6"></div>
@@ -55,7 +54,7 @@ export default function MissionJourneyVisualization() {
               className="flex items-center justify-center"
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black font-serif px-2 leading-tight">
-                <TranslatedContent dynamicContent={true}>ILIGHT….the future of data driven, personalized, life care solutions.</TranslatedContent>
+                THE RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME
               </h2>
             </motion.div>
           </div>
@@ -148,10 +147,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Social Network</TranslatedContent> },
-                    { icon: <Building className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Content / Education</TranslatedContent> },
-                    { icon: <Heart className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Care Champion</TranslatedContent> },
-                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Family inclusion</TranslatedContent> }
+                    { icon: <Users className="w-4 h-4" />, label: "Social Network" },
+                    { icon: <Building className="w-4 h-4" />, label: "Content / Education" },
+                    { icon: <Heart className="w-4 h-4" />, label: "Care Champion" },
+                    { icon: <Users className="w-4 h-4" />, label: "Family inclusion" }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -197,10 +196,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Activity className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Data Science</TranslatedContent> },
-                    { icon: <Brain className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Machine Learning</TranslatedContent> },
-                    { icon: <Sparkles className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Artificial Intelligence</TranslatedContent> },
-                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Care Navigation</TranslatedContent> }
+                    { icon: <Activity className="w-4 h-4" />, label: "Data Science" },
+                    { icon: <Brain className="w-4 h-4" />, label: "Machine Learning" },
+                    { icon: <Sparkles className="w-4 h-4" />, label: "Artificial Intelligence" },
+                    { icon: <Shield className="w-4 h-4" />, label: "Care Navigation" }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -246,10 +245,10 @@ export default function MissionJourneyVisualization() {
                 
                 <div className="space-y-3">
                   {[
-                    { icon: <Heart className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Therapy Providers</TranslatedContent> },
-                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Solution Providers</TranslatedContent> },
-                    { icon: <Users className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Enhanced Engagement</TranslatedContent> },
-                    { icon: <Shield className="w-4 h-4" />, label: <TranslatedContent dynamicContent={true}>Quality Control</TranslatedContent> }
+                    { icon: <Heart className="w-4 h-4" />, label: "Therapy Providers" },
+                    { icon: <Shield className="w-4 h-4" />, label: "Solution Providers" },
+                    { icon: <Users className="w-4 h-4" />, label: "Enhanced Engagement" },
+                    { icon: <Shield className="w-4 h-4" />, label: "Quality Control" }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -318,7 +317,7 @@ export default function MissionJourneyVisualization() {
               }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <TranslatedContent dynamicContent={true}>ILIGHT….the future of data driven, personalized, life care solutions.</TranslatedContent>
+              ILIGHT….the future of data driven, personalized, life care solutions.
             </motion.p>
           </motion.div>
         </div>
