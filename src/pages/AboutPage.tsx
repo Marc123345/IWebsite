@@ -67,20 +67,6 @@ export default function AboutPage() {
       ]
     },
     {
-      name: "Hailey",
-      surname: "Fischer",
-      role: "Marketing",
-      image: "https://ik.imagekit.io/qcvroy8xpd/Container%20(3).png?updatedAt=1748950237974",
-      description: "Strategic communications professional managing multi-platform content and engagement.",
-      linkedin: "https://www.linkedin.com/in/hailey-fischer-ba1385173/",
-      email: "hailey@ilight.health",
-      achievements: [
-        "Experience managing multi-million follower accounts",
-        "Content strategy expert",
-        "Multi-platform content creator"
-      ]
-    },
-    {
       name: "Marc",
       surname: "Friedman",
       role: "Platform",
