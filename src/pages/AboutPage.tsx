@@ -636,7 +636,7 @@ export default function AboutPage() {
                               src={selectedMember.image}
                               alt={`${selectedMember.name} ${selectedMember.surname}, ${selectedMember.role} at iLight`}
                               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                              style={selectedMember.name === "Jayden" ? {
+                              style={selectedMember.name === "Jayden" || selectedMember.name === "Bonelle" ? {
                                 objectFit: "cover",
                                 objectPosition: "center center"
                               } : {
