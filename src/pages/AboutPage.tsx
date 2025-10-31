@@ -111,7 +111,7 @@ export default function AboutPage() {
     {
       name: "Darren",
       surname: "Youngleson",
-      role: "Impact",
+      role: "Strategy & Impact",
       image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1749056402/4c91361b-27ee-453b-88e0-af3026cac747_1_ro3hez_e_background_removal_f_png_vkfbub.png",
       description: "Seasoned healthcare executive with over 30 years of experience in public and private healthcare services companies. Expertise ranges from start up, business development and consolidation in various senior roles having actively participated in numerous strategic initiatives and transformative deals in the healthcare sector. Passionate about leveraging experience to meaningfully improve lives at scale.",
       linkedin: "https://www.linkedin.com/in/darren-youngleson-27a17310/",
@@ -127,7 +127,7 @@ export default function AboutPage() {
     {
       name: "Bonelle",
       surname: "Klinger",
-      role: "Medical Advisor",
+      role: "Care Continuum Excellence",
       image: "https://ik.imagekit.io/qcvroy8xpd/ceaf77c6-42dd-4ddf-9f29-142d58083af3.jpeg?updatedAt=1761917394051",
       description: "Dr. Bonelle Klinger was born in Miami, Florida. She graduated from Emory University and obtained her medical degree at The George Washington University. Her anesthesiology residency was at University of Miami/Jackson Memorial Hospital. She completed her training with a pediatric anesthesiology fellowship at Children's National Medical Center. Dr. Klinger worked as an attending anesthesiologist in several hospitals including the Veteran Affairs Medical Center. She felt it was a great privilege caring for those who served her country. Dr. Klinger was always passionate about integrative medicine and wanted to find a way to help patients heal. She is currently working as a consultant in an integrative medicine clinic and is excited to help as many people as she can.",
       linkedin: "https://www.linkedin.com/in/bonelle-klinger/",
