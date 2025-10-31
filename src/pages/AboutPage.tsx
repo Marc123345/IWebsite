@@ -123,6 +123,21 @@ export default function AboutPage() {
         "Chairman and Co Founder at Momentra (USA)",
         "50+ Healthcare M&A transactions ($5Bn+)"
       ]
+    },
+    {
+      name: "Bonelle",
+      surname: "Klinger",
+      role: "Medical Advisor",
+      image: "https://ik.imagekit.io/qcvroy8xpd/ceaf77c6-42dd-4ddf-9f29-142d58083af3.jpeg?updatedAt=1761917394051",
+      description: "Dr. Bonelle Klinger was born in Miami, Florida. She graduated from Emory University and obtained her medical degree at The George Washington University. Her anesthesiology residency was at University of Miami/Jackson Memorial Hospital. She completed her training with a pediatric anesthesiology fellowship at Children's National Medical Center. Dr. Klinger worked as an attending anesthesiologist in several hospitals including the Veteran Affairs Medical Center. She felt it was a great privilege caring for those who served her country. Dr. Klinger was always passionate about integrative medicine and wanted to find a way to help patients heal. She is currently working as a consultant in an integrative medicine clinic and is excited to help as many people as she can.",
+      linkedin: "https://www.linkedin.com/in/bonelle-klinger/",
+      email: "bonelle@ilight.health",
+      achievements: [
+        "Medical Degree from The George Washington University",
+        "Anesthesiology Residency at University of Miami/Jackson Memorial Hospital",
+        "Pediatric Anesthesiology Fellowship at Children's National Medical Center",
+        "Integrative Medicine Consultant"
+      ]
     }
   ];
 
