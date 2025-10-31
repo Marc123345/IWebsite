@@ -557,8 +557,11 @@ export default function AboutPage() {
                             <img
                               src={member.image}
                               alt={`${member.name} ${member.surname}, ${member.role} at iLight`}
-                              className="w-full h-full object-cover"
-                              style={{
+                              className="w-full h-full"
+                              style={member.name === "Bonelle" ? {
+                                objectFit: "contain",
+                                objectPosition: "center center"
+                              } : {
                                 objectFit: "cover",
                                 objectPosition: "center top"
                               }}
@@ -635,8 +638,11 @@ export default function AboutPage() {
                             <img
                               src={selectedMember.image}
                               alt={`${selectedMember.name} ${selectedMember.surname}, ${selectedMember.role} at iLight`}
-                              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                              style={selectedMember.name === "Jayden" || selectedMember.name === "Bonelle" ? {
+                              className="w-full h-full transform hover:scale-105 transition-transform duration-300"
+                              style={selectedMember.name === "Bonelle" ? {
+                                objectFit: "contain",
+                                objectPosition: "center center"
+                              } : selectedMember.name === "Jayden" ? {
                                 objectFit: "cover",
                                 objectPosition: "center center"
                               } : {
