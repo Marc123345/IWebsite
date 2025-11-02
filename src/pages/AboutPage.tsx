@@ -67,20 +67,6 @@ export default function AboutPage() {
       ]
     },
     {
-      name: "Marc",
-      surname: "Friedman",
-      role: "Platform",
-      image: "https://ik.imagekit.io/qcvroy8xpd/Container%20(6).png?updatedAt=1748950237867",
-      description: "UX/UI specialist focused on creating intuitive wellness platforms.",
-      linkedin: "https://www.linkedin.com/in/portfolio2/",
-      email: "marc@ilight.health",
-      achievements: [
-        "Interactive Communications BA, 95% GPA",
-        "Led B2B SaaS platform design",
-        "CareerFoundry UI certified"
-      ]
-    },
-    {
       name: "Ohad",
       surname: "Kaminer",
       role: "Operations",
