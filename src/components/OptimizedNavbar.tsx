@@ -1,13 +1,14 @@
 import { useState, useEffect, useCallback, memo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, X, ChevronDown, Home, Info, Lightbulb, Heart, 
-  Users, Brain, Bot, Shield, Building, Globe, Target, Award, Book, 
+import {
+  Menu, X, ChevronDown, Home, Info, Lightbulb, Heart,
+  Users, Brain, Bot, Shield, Building, Globe, Target, Award, Book,
   MessageSquare, Calendar, Activity, Phone, Mail,
   Stethoscope, Trophy, Focus, HandHeart
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
+import LanguageToggle from './LanguageToggle';
 import useScrollPosition from '../hooks/useScrollPosition';
 import useMediaQuery from '../hooks/useMediaQuery';
 
@@ -187,39 +188,45 @@ function OptimizedNavbar() {
               <Logo variant="light" size={isDesktop ? "lg" : "md"} />
             </motion.div>
 
-            {/* Menu Button */}
-            <motion.button
-              id="menu-toggle-button"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={toggleMenu}
-              className="relative z-50 p-3 rounded-full bg-ilight-500 text-white hover:bg-ilight-400 transition-colors shadow-lg border border-white/20"
-              aria-label="Toggle menu"
-            >
-              <AnimatePresence mode="wait">
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ opacity: 0, rotate: -45 }}
-                    animate={{ opacity: 1, rotate: 0 }}
-                    exit={{ opacity: 0, rotate: 45 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className="w-6 h-6" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ opacity: 0, rotate: 45 }}
-                    animate={{ opacity: 1, rotate: 0 }}
-                    exit={{ opacity: 0, rotate: -45 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className="w-6 h-6" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+            {/* Right side controls */}
+            <div className="flex items-center gap-3 relative z-50">
+              {/* Language Toggle */}
+              <LanguageToggle />
+
+              {/* Menu Button */}
+              <motion.button
+                id="menu-toggle-button"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={toggleMenu}
+                className="p-3 rounded-full bg-ilight-500 text-white hover:bg-ilight-400 transition-colors shadow-lg border border-white/20"
+                aria-label="Toggle menu"
+              >
+                <AnimatePresence mode="wait">
+                  {isOpen ? (
+                    <motion.div
+                      key="close"
+                      initial={{ opacity: 0, rotate: -45 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      exit={{ opacity: 0, rotate: 45 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <X className="w-6 h-6" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="menu"
+                      initial={{ opacity: 0, rotate: 45 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      exit={{ opacity: 0, rotate: -45 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Menu className="w-6 h-6" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
+            </div>
           </div>
         </div>
       </div>
@@ -331,16 +338,6 @@ function OptimizedNavbar() {
                     )}
                   </div>
                 ))}
-              </div>
-              
-              {/* Language Notice */}
-              <div className="mt-8 p-4 bg-ilight-600/50 rounded-xl border border-white/10 max-w-md mx-auto">
-                <div className="flex items-start gap-3">
-                  <Globe className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <p className="text-white text-sm">
-                    We are working towards offering the website in multiple languages. Currently, it is available in English only.
-                  </p>
-                </div>
               </div>
             </motion.div>
           </motion.div>

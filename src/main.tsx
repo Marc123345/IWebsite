@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import { AnimationController } from './components/AnimationController';
+import './i18n';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(

@@ -14,7 +14,9 @@
     "save": "Save",
     "delete": "Delete",
     "edit": "Edit",
-    "close": "Close"
+    "close": "Close",
+    "scroll": "Scroll",
+    "partners": "Partners"
   },
   "navigation": {
     "home": "Home",
@@ -29,13 +31,128 @@
   },
   "home": {
     "hero": {
-      "title": "The Right Care at the Right Time to the Right Person",
-      "subtitle": "Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection."
+      "title": "The Right Care to the Right Person at the Right Time",
+      "titleWords": ["The", "Right", "Care", "to", "the", "Right", "Person", "at", "the", "Right", "Time"],
+      "subtitle": "Experience personalized therapy solutions through our innovative platform combining AI technology, professional care, and community connection.",
+      "getTherapySolutions": "Get Therapy Solutions",
+      "partners": "Partners"
     },
     "mission": {
       "title": "Our Mission",
       "description": "iLIGHT is a mission-driven organization dedicated to \"Lighting up the Lives\" of people impacted by personal challenges.",
-      "tagline": "HOW MANY LIVES DID YOU LIGHT UP TODAY?"
+      "tagline": "HOW MANY LIVES DID YOU LIGHT UP TODAY?",
+      "comprehensive": "Our comprehensive platform integrates multiple components to deliver care continuum, emotional wellness, and resilience building.",
+      "purposeDriven": "We integrate purpose-driven community engagement, peer support, and innovative data-driven technology for holistic support.",
+      "imperative": "iLIGHT's fundamental imperative is to provide a safe environment for personalized enrichment while stimulating a purpose-driven setting to Help Us, Help You, Help Others.",
+      "continuum": "Personalized Care Continuum Powered by Technology and Data",
+      "rightCare": "The Right Care to the Right Person at the Right Time"
+    },
+    "ecosystem": {
+      "title": "Integrated Healthcare Ecosystem",
+      "ilight": "iLIGHT",
+      "community": "Community",
+      "socialNetwork": "Social Network",
+      "content": "Content / Education",
+      "therapyChampion": "Therapy Champion",
+      "familyInclusion": "Family Inclusion",
+      "platform": "iLIGHT Platform",
+      "dataScience": "Data Science",
+      "machineLearning": "Machine Learning",
+      "ai": "AI",
+      "careNavigation": "Care Navigation",
+      "providers": "Providers",
+      "therapyProviders": "Therapy Providers",
+      "solutionProviders": "Solution Providers",
+      "enhancedEngagement": "Enhanced Engagement",
+      "qualityControl": "Quality Control",
+      "subtitle": "ILIGHT….the future of personalized, data-driven life therapy solutions."
+    },
+    "challenges": {
+      "title": "The Self-Navigation Challenge",
+      "overwhelmingChoices": {
+        "title": "Overwhelming Choices",
+        "description": "Difficulty selecting the right options and resources for therapy solutions."
+      },
+      "inconsistentProgress": {
+        "title": "Inconsistent Progress",
+        "description": "Challenges maintaining momentum and tracking improvement."
+      },
+      "limitedGuidance": {
+        "title": "Limited Guidance",
+        "description": "Lack of professional direction between sessions."
+      },
+      "isolation": {
+        "title": "Isolation",
+        "description": "Feeling alone in the personal wellness journey."
+      }
+    },
+    "solutions": {
+      "title": "The MyLight Solution",
+      "personalizedGuidance": {
+        "title": "Personalized Guidance",
+        "description": "AI-driven recommendations based on your unique needs and progress."
+      },
+      "progressTracking": {
+        "title": "Progress Tracking",
+        "description": "Comprehensive monitoring of your personal wellness journey."
+      },
+      "professionalSupport": {
+        "title": "Professional Support",
+        "description": "Seamless connection with professionals."
+      },
+      "communityConnection": {
+        "title": "Community Connection",
+        "description": "Access to peer support and shared experiences."
+      }
+    },
+    "dataInsights": {
+      "title": "How iLight Uses Data to Drive Better Outcomes",
+      "subtitle": "We don't just collect data — we turn it into personalized care that works.",
+      "tabs": {
+        "patternRecognition": "Pattern Recognition",
+        "personalizedInsights": "Personalized Insights",
+        "continuousLearning": "Continuous Learning"
+      },
+      "patternRecognition": {
+        "title": "Identifying Emotional Patterns",
+        "description": "Our AI identifies patterns in user behavior—from the words they type to the frequency of their interactions—to spot personal wellness signals in real time.",
+        "features": [
+          "Natural language processing identifies emotional states",
+          "Behavior pattern recognition across interactions",
+          "Early identification of potential concerns",
+          "Personalized response based on historical data"
+        ]
+      }
+    },
+    "platformComponents": {
+      "title": "Platform Components",
+      "subtitle": "Our comprehensive platform integrates multiple components to deliver care continuum, emotional wellness, and resilience building while being part of the purpose of helping yourself while helping others.",
+      "note": "Note: Some platform features are currently in development.",
+      "ilightCommunity": {
+        "title": "iLight Community",
+        "description": "A place to share, heal, and grow. Connect with people who understand your journey and celebrate your progress. iLight's fundamental imperative is to not only provide a safe environment for personalized enrichment but importantly stimulate a purpose driven setting to Help Us, Help You, Help Others."
+      },
+      "networkPartners": {
+        "title": "iLight Network Partners",
+        "description": "A network of vetted therapy providers and solutions who care about your unique needs and are committed to providing high-quality care and measurable outcomes."
+      },
+      "mylight": {
+        "title": "MyLight",
+        "description": "Your personal companion for healing and resilience—offering guidance, encouragement, and understanding every step of the way."
+      },
+      "ilightPlus": {
+        "title": "iLight+",
+        "description": "Our premium platform aims to harness the power of data science, machine learning, and AI to deliver a personalized care support and continuum experience."
+      }
+    },
+    "cta": {
+      "title": "Join Our Mission",
+      "description": "Be part of transforming personal wellness therapy solutions through innovation and compassion.",
+      "message": "HELP US, HELP YOU, HELP OTHERS and be part of the PRICELESS PURPOSE of enriching lives together through delivering the RIGHT CARE TO THE RIGHT PERSON AT THE RIGHT TIME."
+    },
+    "platformStatus": {
+      "title": "Platform Status:",
+      "message": "Some features mentioned on this website, including certain gamification and reward elements, are currently in development and will be rolled out progressively. We are continuously working to enhance and expand our platform's capabilities."
     }
   },
   "community": {
@@ -51,11 +168,19 @@
     }
   },
   "footer": {
-    "copyright": "© {{year}} iLight X Corporation. All rights reserved.",
+    "tagline": "iLIGHT is a mission-driven organization that aims to spread the viral and purpose-focused power, message and actions of \"Lighting up the Lives\" of people impacted by personal challenges.",
+    "contact": "Contact",
+    "phone": "+1 (858) 786-0288",
+    "email": "support@ilight.care",
+    "stayUpdated": "Stay Updated",
+    "newsletterText": "Subscribe to our newsletter for the latest updates as part of the ILIGHT community.",
+    "emailPlaceholder": "Your email address",
+    "copyright": "© 2025 iLight X Corporation. All rights reserved.",
     "links": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
       "cookies": "Cookie Policy"
     }
-  }
+  },
+  "dir": "ltr"
 }
