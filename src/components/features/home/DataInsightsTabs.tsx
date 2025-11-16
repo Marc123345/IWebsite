@@ -73,24 +73,24 @@ export default function DataInsightsTabs({ className = '' }: DataInsightsTabsPro
   return (
     <div className={`${className}`}>
       {/* Tabs Navigation - Mobile-friendly scrollable tabs */}
-      <div className="relative flex items-center justify-between max-w-md mx-auto mb-8 overflow-x-auto pb-4 scrollbar-hide">
+      <div className="relative flex items-center justify-between max-w-md mx-auto mb-12 overflow-visible pb-4 pt-4">
         {/* Horizontal Line */}
         <div className="absolute top-1/2 left-0 h-1 bg-gray-200 w-full z-0" style={{ transform: 'translateY(-50%)' }}>
-          <motion.div 
+          <motion.div
             className="h-full bg-ilight-500 transition-all duration-700 ease-out"
             animate={{ width: `${(activeTab / (tabs.length - 1)) * 100}%` }}
           />
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex space-x-6 md:space-x-10 relative z-10">
+        <div className="flex space-x-6 md:space-x-10 relative z-10 mx-auto">
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
               aria-label={`View point: ${tab.title}`}
               className="relative group focus:outline-none focus-visible:ring-2 focus-visible:ring-ilight-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition-transform duration-300 ease-out flex-shrink-0"
-              style={{ 
-                transform: `scale(${activeTab === index ? 1.1 : 0.9})` 
+              style={{
+                transform: `scale(${activeTab === index ? 1.1 : 0.9})`
               }}
               onClick={() => setActiveTab(index)}
             >
