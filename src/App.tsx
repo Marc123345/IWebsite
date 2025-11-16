@@ -31,7 +31,14 @@ const PromisePage = lazy(() => import('./pages/PromisePage'));
 // Community Pages
 const CommunityPage = lazy(() => import('./pages/CommunityPage'));
 const EventsPage = lazy(() => import('./pages/community/EventsPage'));
-const IlluminatorsPage = lazy(() => import('./pages/community/IlluminatorsPage'));
+const CommunityIlluminatorsPage = lazy(() => import('./pages/community/IlluminatorsPage'));
+
+// Illuminators Campaign Pages
+const IlluminatorsPage = lazy(() => import('./pages/IlluminatorsPage'));
+const RecommendPage = lazy(() => import('./pages/illuminators/RecommendPage'));
+const SharePage = lazy(() => import('./pages/illuminators/SharePage'));
+const ParticipatePage = lazy(() => import('./pages/illuminators/ParticipatePage'));
+const ThankYouPage = lazy(() => import('./pages/illuminators/ThankYouPage'));
 
 // Partner Pages
 const PartnersPage = lazy(() => import('./pages/PartnersPage'));
@@ -104,7 +111,14 @@ function App() {
                 {/* Community Routes */}
                 <Route path="/community" element={<OptimizedPageTransition><CommunityPage /></OptimizedPageTransition>} />
                 <Route path="/community/events" element={<OptimizedPageTransition><EventsPage /></OptimizedPageTransition>} />
-                <Route path="/community/illuminators" element={<OptimizedPageTransition><IlluminatorsPage /></OptimizedPageTransition>} />
+                <Route path="/community/illuminators" element={<OptimizedPageTransition><CommunityIlluminatorsPage /></OptimizedPageTransition>} />
+
+                {/* Illuminators Campaign Routes */}
+                <Route path="/illuminators" element={<OptimizedPageTransition><IlluminatorsPage /></OptimizedPageTransition>} />
+                <Route path="/illuminators/recommend" element={<OptimizedPageTransition><RecommendPage /></OptimizedPageTransition>} />
+                <Route path="/illuminators/share" element={<OptimizedPageTransition><SharePage /></OptimizedPageTransition>} />
+                <Route path="/illuminators/participate" element={<OptimizedPageTransition><ParticipatePage /></OptimizedPageTransition>} />
+                <Route path="/illuminators/thank-you" element={<OptimizedPageTransition><ThankYouPage /></OptimizedPageTransition>} />
 
                 {/* Partner Routes */}
                 <Route path="/partners" element={<OptimizedPageTransition><PartnersPage /></OptimizedPageTransition>} />

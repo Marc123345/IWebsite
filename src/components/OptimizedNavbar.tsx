@@ -159,6 +159,17 @@ function OptimizedNavbar() {
       description: "Join our volunteer program"
     },
     {
+      path: '/illuminators',
+      label: 'Illuminators Campaign',
+      icon: <Lightbulb className="w-5 h-5" />,
+      description: "Random Acts of Illumination",
+      subItems: [
+        { path: '/illuminators/recommend', label: 'Share a Resource', icon: <Lightbulb className="w-5 h-5" />, description: 'Recommend an illuminator' },
+        { path: '/illuminators/share', label: 'Tell Your Story', icon: <Heart className="w-5 h-5" />, description: 'Share your journey' },
+        { path: '/illuminators/participate', label: 'Get Involved', icon: <Users className="w-5 h-5" />, description: 'Volunteer opportunities' }
+      ]
+    },
+    {
       path: '/partners',
       label: 'Partners',
       icon: <Stethoscope className="w-5 h-5" />,
