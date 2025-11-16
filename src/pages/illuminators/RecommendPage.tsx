@@ -100,7 +100,7 @@ export default function RecommendPage() {
         canonical="/illuminators/recommend"
       />
 
-      <Section background="white" padding="xl" className="min-h-screen">
+      <Section background="white" padding="xl" className="min-h-screen pt-24">
         <Container size="md">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ export default function RecommendPage() {
             </Button>
 
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ilight-500 to-ilight-600 mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ilight-500 to-ilight-600 mb-6">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
 

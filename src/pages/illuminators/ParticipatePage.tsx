@@ -111,7 +111,7 @@ export default function ParticipatePage() {
         canonical="/illuminators/participate"
       />
 
-      <Section background="white" padding="xl" className="min-h-screen">
+      <Section background="white" padding="xl" className="min-h-screen pt-24">
         <Container size="md">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -130,7 +130,7 @@ export default function ParticipatePage() {
             </Button>
 
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ilight-700 to-ilight-800 mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ilight-700 to-ilight-800 mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
 
