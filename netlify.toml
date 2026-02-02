@@ -1,13 +1,8 @@
-# Netlify configuration file
-# This handles client-side routing for single page applications
-
 [build]
-  publish = "dist"
-  command = "npm run build"
+publish = "dist"
+command = "npx vite build"
 
-# The following redirect rule ensures that all routes are handled by index.html
-# This is necessary for client-side routing to work properly
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
