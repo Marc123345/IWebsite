@@ -40,7 +40,7 @@ export default function AboutPage() {
       name: "Michael",
       surname: "Batashvili",
       role: "Research and Academic Partnerships",
-      image: "https://ik.imagekit.io/qcvroy8xpd/Container.png?updatedAt=1748950133914",
+      image: "https://ik.imagekit.io/qcvroy8xpd/1619874568091.jpeg",
       description: "Research lead specializing in quantitative analysis and academic partnerships.",
       linkedin: "https://www.linkedin.com/in/michael-batashvili-1660ab201/",
       email: "michael@ilight.health",
