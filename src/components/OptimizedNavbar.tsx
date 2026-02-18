@@ -4,7 +4,7 @@ import {
   Menu, X, ChevronDown, Home, Info, Lightbulb, Heart,
   Users, Brain, Bot, Shield, Building, Globe, Target, Award, Book,
   MessageSquare, Calendar, Activity, Phone, Mail,
-  Stethoscope, Trophy, Focus, HandHeart
+  Stethoscope, Trophy, Focus, HandHeart, ExternalLink
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
@@ -17,6 +17,7 @@ interface MenuItem {
   icon: JSX.Element;
   description?: string;
   subItems?: MenuItem[];
+  external?: boolean;
 }
 
 /**
@@ -178,6 +179,13 @@ function OptimizedNavbar() {
         { path: '/partners/benefits', label: 'Benefits', icon: <Award className="w-5 h-5" />, description: 'Provider advantages' },
         { path: '/partners/join', label: 'Join Network', icon: <Target className="w-5 h-5" />, description: 'Apply to join' }
       ]
+    },
+    {
+      path: 'https://ilight.lovable.app',
+      label: 'One Pager',
+      icon: <ExternalLink className="w-5 h-5" />,
+      description: "View our one pager",
+      external: true
     }
   ];
 
@@ -273,34 +281,53 @@ function OptimizedNavbar() {
                       className="relative"
                       onClick={() => item.subItems && toggleSubmenu(item.path)}
                     >
-                      <Link
-                        to={item.path}
-                        className={`flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full ${
-                          location.pathname === item.path || activeSubmenu === item.path
-                            ? 'bg-ilight-500 text-white shadow-lg'
-                            : 'bg-ilight-700/50 text-white hover:text-white'
-                        }`}
-                        onClick={(e) => item.subItems && e.preventDefault()}
-                      >
-                        <div className="w-12 h-12 rounded-xl bg-ilight-400 flex items-center justify-center flex-shrink-0 shadow-md">
-                          {item.icon}
-                        </div>
-                        <div className="flex-grow">
-                          <div className="font-bold text-lg">{item.label}</div>
-                          {item.description && (
-                            <div className="text-sm text-white/90">{item.description}</div>
+                      {item.external ? (
+                        <a
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full bg-ilight-700/50 text-white hover:text-white"
+                        >
+                          <div className="w-12 h-12 rounded-xl bg-ilight-400 flex items-center justify-center flex-shrink-0 shadow-md">
+                            {item.icon}
+                          </div>
+                          <div className="flex-grow">
+                            <div className="font-bold text-lg">{item.label}</div>
+                            {item.description && (
+                              <div className="text-sm text-white/90">{item.description}</div>
+                            )}
+                          </div>
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className={`flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full ${
+                            location.pathname === item.path || activeSubmenu === item.path
+                              ? 'bg-ilight-500 text-white shadow-lg'
+                              : 'bg-ilight-700/50 text-white hover:text-white'
+                          }`}
+                          onClick={(e) => item.subItems && e.preventDefault()}
+                        >
+                          <div className="w-12 h-12 rounded-xl bg-ilight-400 flex items-center justify-center flex-shrink-0 shadow-md">
+                            {item.icon}
+                          </div>
+                          <div className="flex-grow">
+                            <div className="font-bold text-lg">{item.label}</div>
+                            {item.description && (
+                              <div className="text-sm text-white/90">{item.description}</div>
+                            )}
+                          </div>
+                          {item.subItems && (
+                            <motion.div
+                              animate={{ rotate: activeSubmenu === item.path ? 180 : 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="ml-auto"
+                            >
+                              <ChevronDown className="w-5 h-5" />
+                            </motion.div>
                           )}
-                        </div>
-                        {item.subItems && (
-                          <motion.div
-                            animate={{ rotate: activeSubmenu === item.path ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-auto"
-                          >
-                            <ChevronDown className="w-5 h-5" />
-                          </motion.div>
-                        )}
-                      </Link>
+                        </Link>
+                      )}
                     </div>
 
                     {item.subItems && (
