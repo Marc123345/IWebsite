@@ -274,11 +274,11 @@ function OptimizedNavbar() {
                 <X className="w-6 h-6" />
               </motion.button>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto items-stretch">
                 {menuItems.map((item) => (
-                  <div key={item.path} className="w-full">
+                  <div key={item.path} className="w-full h-full">
                     <div
-                      className="relative"
+                      className="relative h-full"
                       onClick={() => item.subItems && toggleSubmenu(item.path)}
                     >
                       {item.external ? (
@@ -286,7 +286,7 @@ function OptimizedNavbar() {
                           href={item.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full bg-ilight-700/50 text-white hover:text-white"
+                          className="flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full h-full bg-ilight-700/50 text-white hover:text-white"
                         >
                           <div className="w-12 h-12 rounded-xl bg-ilight-400 flex items-center justify-center flex-shrink-0 shadow-md">
                             {item.icon}
@@ -301,7 +301,7 @@ function OptimizedNavbar() {
                       ) : (
                         <Link
                           to={item.path}
-                          className={`flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full ${
+                          className={`flex items-center gap-4 p-5 rounded-2xl text-base font-medium transition-all duration-300 hover:bg-ilight-500 w-full h-full ${
                             location.pathname === item.path || activeSubmenu === item.path
                               ? 'bg-ilight-500 text-white shadow-lg'
                               : 'bg-ilight-700/50 text-white hover:text-white'
