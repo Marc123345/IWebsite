@@ -4,7 +4,7 @@ import {
   Menu, X, ChevronDown, Home, Info, Lightbulb, Heart,
   Users, Brain, Bot, Shield, Building, Globe, Target, Award, Book,
   MessageSquare, Calendar, Activity, Phone, Mail,
-  Stethoscope, Trophy, Focus, HandHeart, ExternalLink
+  Stethoscope, Trophy, Focus, HandHeart
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
@@ -183,7 +183,7 @@ function OptimizedNavbar() {
     {
       path: 'https://ilight.lovable.app',
       label: 'One Pager',
-      icon: <ExternalLink className="w-5 h-5" />,
+      icon: <span className="text-white font-bold text-xl leading-none">1</span>,
       description: "View our one pager",
       external: true
     }
